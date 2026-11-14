@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags for SEO -->
+  <title>Alight Pixels | Creative Production Studio — Video, Photography, Post-Production</title>
+  <meta name="title" content="Alight Pixels | Creative Production Studio — Video, Photography, Post-Production" />
+  <meta name="description" content="Alight Pixels is an independent creative production studio crafting cinematic films, photography, and compelling visual content for ambitious brands." />
+  <meta name="keywords" content="video production, photography, commercial films, brand films, post production, color grading, digital content, creative studio, cinematic visuals" />
+  <meta name="author" content="Alight Pixels" />
+  <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFBF8" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12100E" />
+  <link rel="canonical" href="https://alightpixels.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alightpixels.com/" />
+  <meta property="og:site_name" content="Alight Pixels" />
+  <meta property="og:title" content="Alight Pixels — Creative Production Studio" />
+  <meta property="og:description" content="We create visuals that move brands. Cinematic films, photography, and compelling visual content crafted with purpose." />
+  <meta property="og:image" content="https://alightpixels.com/assets/images/hero-showreel.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://alightpixels.com/" />
+  <meta property="twitter:title" content="Alight Pixels — Creative Production Studio" />
+  <meta property="twitter:description" content="We create visuals that move brands. Cinematic films, photography, and compelling visual content crafted with purpose." />
+  <meta property="twitter:image" content="https://alightpixels.com/assets/images/hero-showreel.jpg" />
+
+  <!-- Favicon (Amber Sun Circle Motif) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Alight Pixels",
+    "alternateName": "Alight Pixels Studio",
+    "description": "Independent creative production studio specializing in cinematic video production, commercial photography, post-production, and digital storytelling.",
+    "url": "https://alightpixels.com",
+    "logo": "https://alightpixels.com/assets/images/logo.png",
+    "image": "https://alightpixels.com/assets/images/hero-showreel.jpg",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://instagram.com/alightpixels",
+      "https://linkedin.com/company/alightpixels"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Creative Production Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Video Production",
+            "description": "Commercial films, brand films, promotional videos, product videos, social media reels, corporate films."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Photography",
+            "description": "Product, food, portrait, corporate, event, and lifestyle photography."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Post Production",
+            "description": "Video editing, color grading, motion graphics, sound design, visual effects, reels editing."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Content",
+            "description": "Social media content, content creation, creative campaigns, brand content, digital storytelling."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Prevent FOUC: Early theme initialization -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('alight_theme');
+        var theme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- React Mount Point -->
+  <div id="root"></div>
+
+  <!-- Vite Dev / Production Entry -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alightpixels.com/sitemap.xml
+
