@@ -10,6 +10,7 @@ const SERVICES = [
     categoryFilter: 'Product Photography',
     mediaType: 'image',
     mediaSrc: 'assets/images/portfolio/photography-showcase.jpg',
+    duration: 7000,
     aspect: '16/10'
   },
   {
@@ -22,6 +23,7 @@ const SERVICES = [
     mediaType: 'video',
     mediaSrc: 'assets/videos/video-production-reel.mp4',
     poster: 'assets/images/portfolio/video-production-poster.jpg',
+    duration: 14000,
     aspect: '16/10'
   },
   {
@@ -31,8 +33,10 @@ const SERVICES = [
     description: 'Strategic visual content engineered to strengthen digital presence, spark engagement, and build lasting brand resonance.',
     deliverables: ['Social Campaigns', 'Creative Direction', 'Brand Narratives', 'Short-Form Video'],
     categoryFilter: 'Social Media Campaigns',
-    mediaType: 'image',
-    mediaSrc: 'assets/images/portfolio/digital-content-showcase.jpg',
+    mediaType: 'video',
+    mediaSrc: 'assets/videos/instagram-reel-analytics.mp4',
+    poster: 'assets/images/portfolio/digital-content-poster.jpg',
+    duration: 10000,
     aspect: '16/10'
   },
   {
@@ -44,12 +48,12 @@ const SERVICES = [
     categoryFilter: 'All',
     mediaType: 'image',
     mediaSrc: 'assets/images/portfolio/website-showcase.jpg',
+    duration: 7000,
     aspect: '16/10'
   }
 ];
 
-const IMAGE_SLIDE_DURATION = 7000; // 7 seconds dwell for photography, digital content, website
-const VIDEO_SLIDE_DURATION = 14000; // 14 seconds dwell for videography reel to play naturally
+const DEFAULT_SLIDE_DURATION = 7000;
 
 export default function Hero({ onSelectCategory }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -108,14 +112,12 @@ export default function Hero({ onSelectCategory }) {
           });
         }
       }
-      timerRef.current = setTimeout(() => {
-        triggerNext();
-      }, VIDEO_SLIDE_DURATION);
-    } else {
-      timerRef.current = setTimeout(() => {
-        triggerNext();
-      }, IMAGE_SLIDE_DURATION);
     }
+
+    const dwellTime = current.duration || DEFAULT_SLIDE_DURATION;
+    timerRef.current = setTimeout(() => {
+      triggerNext();
+    }, dwellTime);
 
     return () => {
       if (timerRef.current) {
@@ -240,7 +242,7 @@ export default function Hero({ onSelectCategory }) {
                     webkit-playsinline="true"
                     preload="auto"
                     poster={current.poster}
-                    aria-label="Alight Pixels Videography"
+                    aria-label={current.title}
                     onLoadedData={(e) => {
                       e.currentTarget.muted = true;
                       e.currentTarget.play().catch(() => {});
@@ -265,7 +267,7 @@ export default function Hero({ onSelectCategory }) {
         <div className="hero-service-tabs" role="tablist" aria-label="Services Showcase">
           {SERVICES.map((srv, idx) => {
             const isActive = idx === currentIndex;
-            const duration = srv.mediaType === 'video' ? VIDEO_SLIDE_DURATION : IMAGE_SLIDE_DURATION;
+            const duration = srv.duration || DEFAULT_SLIDE_DURATION;
 
             return (
               <button
