@@ -112,17 +112,16 @@ export const PROJECTS = [
   },
   {
     id: "tactile-forms",
-    title: "Tactile Forms",
-    category: "Product Photography",
-    client: "[Production Showcase — Ready for Client Credit]",
+    title: "River Ghat Reflections",
+    category: "Photography",
+    client: "Editorial Commission",
     aspect: "aspect-4-3",
-    image: "assets/images/portfolio/product-photo-01.jpg",
-    overview: "Studio product campaign highlighting industrial textures, matte ceramics, and refined geometry under calibrated directional lighting.",
-    approach: "Shot using medium-format digital capture with precision focus stacking to maintain absolute edge fidelity and rich micro-contrast across surfaces.",
+    image: "assets/images/portfolio/photography-boats-original.jpg",
+    overview: "Atmospheric location photography capturing color, texture, and cultural stillness along the sacred riverbanks.",
+    approach: "Captured with natural dawn light, emphasizing deep earth tones, textured wooden boats, and unhurried spiritual composition.",
     gallery: [
-      "assets/images/portfolio/product-photo-01.jpg",
-      "assets/images/about/equipment-lenses.jpg",
-      "assets/images/portfolio/food-beverage-01.jpg"
+      "assets/images/portfolio/photography-boats-original.jpg",
+      "assets/images/portfolio/photography-showcase.jpg"
     ],
     relatedIds: ["culinary-atelier", "solitude-and-vision"]
   },
@@ -159,20 +158,19 @@ export const PROJECTS = [
     relatedIds: ["luminescence", "origins-of-craft"]
   },
   {
-    id: "rhythm-and-pulse",
-    title: "Rhythm & Pulse",
-    category: "Social Media Campaigns",
-    client: "[Production Showcase — Ready for Client Credit]",
-    aspect: "aspect-4-5",
-    image: "assets/images/portfolio/social-campaign-01.jpg",
-    overview: "Vertical narrative reels and dynamic motion assets engineered for mobile engagement without sacrificing cinematic production quality.",
-    approach: "Engineered specifically for 9:16 framing with swift, rhythm-matched cuts and bespoke sound design tailored for short-form digital channels.",
+    id: "bluink-experience",
+    title: "Bluink Digital Platform",
+    category: "Web & Digital",
+    client: "Bluink Apparel",
+    aspect: "aspect-16-9",
+    image: "assets/images/portfolio/website-bluink.jpg",
+    overview: "Custom brand commerce platform crafted for high-performance corporate apparel and bespoke embroidery showcases.",
+    approach: "Sleek glassmorphic navigation header, dynamic hero sliders, interactive quote conversion funnels, and responsive cross-device layout.",
     gallery: [
-      "assets/images/portfolio/social-campaign-01.jpg",
-      "assets/images/portfolio/lifestyle-photo-01.jpg",
-      "assets/images/about/editing-suite.jpg"
+      "assets/images/portfolio/website-bluink.jpg",
+      "assets/images/portfolio/website-showcase.jpg"
     ],
-    relatedIds: ["luminescence", "solitude-and-vision"]
+    relatedIds: ["luminescence", "tactile-forms"]
   },
   {
     id: "solitude-and-vision",

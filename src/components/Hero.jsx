@@ -47,7 +47,7 @@ const SERVICES = [
     deliverables: ['Brand Websites', 'Portfolio Experiences', 'Interactive Design', 'Full-Stack Performance'],
     categoryFilter: 'All',
     mediaType: 'image',
-    mediaSrc: 'assets/images/portfolio/website-showcase.jpg',
+    mediaSrc: 'assets/images/portfolio/website-bluink.jpg',
     duration: 7000,
     aspect: '16/10'
   }

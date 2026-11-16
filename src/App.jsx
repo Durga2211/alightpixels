@@ -11,13 +11,10 @@ import Footer from './components/Footer';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
 export default function App() {
-  const [activeFilter, setActiveFilter] = useState('All');
-
   // Activate smooth scroll-reveal transitions across the entire site
   useScrollReveal();
 
-  const handleSelectCategory = (cat) => {
-    setActiveFilter(cat);
+  const handleSelectCategory = () => {
     const selectedWorkEl = document.getElementById('selected-work');
     if (selectedWorkEl) {
       selectedWorkEl.scrollIntoView({ behavior: 'smooth' });
@@ -41,11 +38,8 @@ export default function App() {
         {/* 3. WHO WE ARE / ABOUT */}
         <WhoWeAre />
 
-        {/* 4. SELECTED WORK */}
-        <SelectedWork
-          activeFilter={activeFilter}
-          setActiveFilter={setActiveFilter}
-        />
+        {/* 4. WORK PORTFOLIO */}
+        <SelectedWork />
 
         {/* 5. SHOWREEL (Only Dark Section) */}
         <Showreel />
