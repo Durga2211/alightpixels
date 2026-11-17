@@ -156,6 +156,7 @@ export default function StackSwipeModal({ stack, initialIndex = 0, onClose }) {
                   poster={currentItem.poster}
                   className="stack-slide-video"
                   autoPlay
+                  muted
                   controls
                   loop
                   playsInline

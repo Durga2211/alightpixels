@@ -64,7 +64,7 @@ export default function Footer({ onSelectCategory }) {
           <div className="footer-social-col">
             <h4 className="footer-col-title">Connect</h4>
             <ul className="footer-link-list">
-              <li><a href="https://instagram.com/alightpixels" target="_blank" rel="noopener noreferrer" className="footer-link">Instagram</a></li>
+              <li><a href="https://www.instagram.com/alight_pixels/" target="_blank" rel="noopener noreferrer" className="footer-link">Instagram</a></li>
               <li><a href="https://linkedin.com/company/alightpixels" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn</a></li>
               <li><a href="https://youtube.com/@alightpixels" target="_blank" rel="noopener noreferrer" className="footer-link">YouTube</a></li>
               <li><a href="mailto:hello@alightpixels.com" className="footer-link">Email Direct</a></li>

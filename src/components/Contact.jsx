@@ -267,10 +267,17 @@ export default function Contact() {
                     required
                   >
                     <option value="" disabled>Select a primary service</option>
+                    <option value="Reel editing">Reel editing</option>
+                    <option value="Long-form YouTube edit">Long-form YouTube edit</option>
+                    <option value="Podcast editing">Podcast editing</option>
+                    <option value="Product shoot">Product shoot</option>
+                    <option value="Corporate video">Corporate video</option>
+                    <option value="Event photography">Event photography</option>
+                    <option value="Brand photoshoot">Brand photoshoot</option>
                     <option value="Video Production">Video Production</option>
                     <option value="Photography">Photography</option>
-                    <option value="Post Production">Post Production</option>
                     <option value="Digital Content">Digital Content</option>
+                    <option value="Post Production">Post Production</option>
                     <option value="Other">Other / Full Campaign</option>
                   </select>
                   <span className="field-error" aria-live="polite">{errors.service}</span>

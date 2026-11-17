@@ -293,15 +293,33 @@ export const PORTFOLIO_STACKS = [
     id: "photography",
     title: "Photography",
     subtitle: "Composition, Light & Cultural Stills",
-    countLabel: "5 Works",
+    countLabel: "7 Works",
     aspect: "stack-aspect-portrait",
-    coverImage: "assets/images/portfolio/photography-boats-original.jpg",
+    coverImage: "assets/images/portfolio/photography-og-luxury-perfume.jpg",
     stackPreviews: [
-      "assets/images/portfolio/photography-sadhu-original.jpg",
-      "assets/images/portfolio/photography-bandmaster.jpg",
-      "assets/images/portfolio/photography-vendor.jpg"
+      "assets/images/portfolio/photography-wedding-bride.jpg",
+      "assets/images/portfolio/photography-boats-original.jpg",
+      "assets/images/portfolio/photography-sadhu-original.jpg"
     ],
     items: [
+      {
+        id: "photo-og-perfume",
+        title: "OG Luxury — Shadow Perfume",
+        category: "Product Shoot",
+        client: "OG Beauty Luxury",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-og-luxury-perfume.jpg",
+        description: "Dramatic directional studio lighting, obsidian shadows, and caustic blue refraction celebrating luxury perfume aesthetics."
+      },
+      {
+        id: "photo-wedding-bride",
+        title: "Traditional Bridal Procession",
+        category: "Event Photography",
+        client: "Wedding Commission",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-wedding-bride.jpg",
+        description: "Authentic emotional moments, vibrant red silk saree, and sacred floral canopy procession captured under natural sunlight."
+      },
       {
         id: "photo-boats",
         title: "River Ghat Reflections",
@@ -362,42 +380,44 @@ export const PORTFOLIO_STACKS = [
     ],
     items: [
       {
-        id: "video-reel",
+        id: "video-candid-reel",
+        title: "Candid Wedding & Event Reel",
+        category: "Reel Editing & Event Video",
+        client: "Wedding & Event Production",
+        mediaType: "video",
+        src: "assets/videos/candid-reel-001.mp4",
+        poster: "assets/images/portfolio/photography-wedding-bride.jpg",
+        description: "Unposed emotional celebration, cultural richness, and vibrant documentary cinematography crafted for high-impact social reels."
+      },
+      {
+        id: "video-car-delivery",
+        title: "Automotive Delivery Cinema",
+        category: "Corporate Video & Commercial",
+        client: "Automotive Delivery Showcase",
+        mediaType: "video",
+        src: "assets/videos/car-delivery.mp4",
+        poster: "assets/images/about/bts-camera-rig.jpg",
+        description: "Dynamic vehicle unveil, cinematic lighting, and celebratory client delivery captured with smooth camera tracking."
+      },
+      {
+        id: "video-podcast-reel",
+        title: "Studio Podcast Production",
+        category: "Podcast Editing & Video",
+        client: "Podcast Studio",
+        mediaType: "video",
+        src: "assets/videos/podcast-reel.mp4",
+        poster: "assets/images/about/editing-suite.jpg",
+        description: "Studio lighting, multi-cam capture, and punchy reel formatting designed for viral episode highlights and digital reach."
+      },
+      {
+        id: "video-production-reel",
         title: "Commercial Production Reel",
         category: "Commercial Film Production",
         client: "Studio Production Reel",
         mediaType: "video",
         src: "assets/videos/video-production-reel.mp4",
         poster: "assets/images/portfolio/video-production-poster.jpg",
-        description: "Large-format cinematography with anamorphic lenses capturing kinetic movement and luxury atmospheres."
-      },
-      {
-        id: "video-showreel",
-        title: "Studio Cinema Showreel",
-        category: "Brand Films",
-        client: "Alight Pixels Cinema",
-        mediaType: "video",
-        src: "assets/videos/showreel.mp4",
-        poster: "assets/images/about/bts-camera-rig.jpg",
-        description: "Cinematic commercial showreel highlighting dramatic studio lighting and documentary precision."
-      },
-      {
-        id: "video-camera-rig",
-        title: "Cinema Rig & Prime Optics",
-        category: "Production Craft",
-        client: "Studio Equipment",
-        mediaType: "image",
-        src: "assets/images/about/bts-camera-rig.jpg",
-        description: "Professional cinema camera builds with vintage cinema glass and wireless video transmission."
-      },
-      {
-        id: "video-post-suite",
-        title: "Color Grading & Post Suite",
-        category: "Post Production",
-        client: "Editorial Suite",
-        mediaType: "image",
-        src: "assets/images/about/editing-suite.jpg",
-        description: "Precision color grading on calibrated reference monitors with customized film emulation curves."
+        description: "Large-format cinema sensors with vintage lenses capturing kinetic movement, luxury atmospheres, and brand storytelling."
       }
     ]
   },
