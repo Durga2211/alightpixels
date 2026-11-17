@@ -288,3 +288,190 @@ export const TESTIMONIALS = [
   }
 ];
 
+export const PORTFOLIO_STACKS = [
+  {
+    id: "photography",
+    title: "Photography",
+    subtitle: "Composition, Light & Cultural Stills",
+    countLabel: "5 Works",
+    aspect: "stack-aspect-portrait",
+    coverImage: "assets/images/portfolio/photography-boats-original.jpg",
+    stackPreviews: [
+      "assets/images/portfolio/photography-sadhu-original.jpg",
+      "assets/images/portfolio/photography-bandmaster.jpg",
+      "assets/images/portfolio/photography-vendor.jpg"
+    ],
+    items: [
+      {
+        id: "photo-boats",
+        title: "River Ghat Reflections",
+        category: "Atmospheric Location Stills",
+        client: "Editorial Commission",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-boats-original.jpg",
+        description: "Atmospheric morning light, sacred river stillness, and deep earth tones along the sacred riverbanks."
+      },
+      {
+        id: "photo-sadhu",
+        title: "Sacred Devotion & Stillness",
+        category: "Cultural Documentary",
+        client: "Documentary Stills",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-sadhu-original.jpg",
+        description: "Intimate portrait honoring quiet prayer, vermilion devotion, and warm directional sunlight."
+      },
+      {
+        id: "photo-bandmaster",
+        title: "The Brass Bandmaster",
+        category: "Editorial Street Portraiture",
+        client: "Heritage Series",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-bandmaster.jpg",
+        description: "Dignified street portraiture capturing the ceremonial red velvet uniform and heritage cycle rickshaw."
+      },
+      {
+        id: "photo-vendor",
+        title: "Sacred Threads & Beads",
+        category: "Documentary Still Life",
+        client: "Cultural Craft",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-vendor.jpg",
+        description: "Vibrant ritual threads, hand-strung beads, and cultural textures outside the temple sanctum."
+      },
+      {
+        id: "photo-ayodhya",
+        title: "Ayodhya Cultural Stories",
+        category: "Visual Narrative Triptych",
+        client: "Alight Pixels Original",
+        mediaType: "image",
+        src: "assets/images/portfolio/photography-ayodhya.jpg",
+        description: "A three-tier visual narrative of sacred craft, brass puja artifacts, and peacock feather ceremonies."
+      }
+    ]
+  },
+  {
+    id: "videography",
+    title: "Videography",
+    subtitle: "Cinematic Films & Brand Stories",
+    countLabel: "4 Works",
+    aspect: "stack-aspect-landscape",
+    coverImage: "assets/images/portfolio/commercial-film-01.jpg",
+    stackPreviews: [
+      "assets/images/portfolio/brand-film-01.jpg",
+      "assets/images/portfolio/corporate-film-01.jpg"
+    ],
+    items: [
+      {
+        id: "video-reel",
+        title: "Cinematic Production Reel",
+        category: "Commercial Film Production",
+        client: "Studio Production Reel",
+        mediaType: "video",
+        src: "assets/videos/video-production-reel.mp4",
+        poster: "assets/images/portfolio/video-production-poster.jpg",
+        description: "Large-format cinematography with anamorphic lenses capturing kinetic movement and luxury atmospheres."
+      },
+      {
+        id: "video-luminescence",
+        title: "Luminescence",
+        category: "Commercial Film",
+        client: "Luxury Showcase",
+        mediaType: "image",
+        src: "assets/images/portfolio/commercial-film-01.jpg",
+        description: "A high-impact visual exploration of light, kinetic motion, and refined brand atmosphere."
+      },
+      {
+        id: "video-origins",
+        title: "Origins of Craft",
+        category: "Brand Documentary",
+        client: "Artisanal Studio",
+        mediaType: "image",
+        src: "assets/images/portfolio/brand-film-01.jpg",
+        description: "Artisanal precision, tactile textures, and natural ambient light across architecture studios."
+      },
+      {
+        id: "video-architects",
+        title: "Architects of Tomorrow",
+        category: "Corporate Narrative",
+        client: "Design Firm",
+        mediaType: "image",
+        src: "assets/images/portfolio/corporate-film-01.jpg",
+        description: "Dynamic architectural tracking shots and personal leadership interviews on urban sustainability."
+      }
+    ]
+  },
+  {
+    id: "digital-content",
+    title: "Digital Content",
+    subtitle: "Viral Campaigns & Social Analytics",
+    countLabel: "3 Works",
+    aspect: "stack-aspect-portrait",
+    coverImage: "assets/images/portfolio/social-campaign-01.jpg",
+    stackPreviews: [
+      "assets/images/portfolio/digital-content-poster.jpg"
+    ],
+    items: [
+      {
+        id: "digital-reel",
+        title: "Reel Analytics & Reach Engine",
+        category: "Short-Form Performance Video",
+        client: "Meta Collaboration",
+        mediaType: "video",
+        src: "assets/videos/instagram-reel-analytics.mp4",
+        poster: "assets/images/portfolio/digital-content-poster.jpg",
+        description: "13.8K+ impressions, high-retention short-form video content engineered for organic platform virality."
+      },
+      {
+        id: "digital-campaign",
+        title: "High-Impact Social Campaign",
+        category: "Social Media Strategy",
+        client: "Audience Growth Campaign",
+        mediaType: "image",
+        src: "assets/images/portfolio/social-campaign-01.jpg",
+        description: "Strategic visual campaign driving measurable audience acquisition, shares, and brand resonance."
+      },
+      {
+        id: "digital-narrative",
+        title: "Omnichannel Brand Stories",
+        category: "Creative Direction",
+        client: "Creator Narrative",
+        mediaType: "image",
+        src: "assets/images/portfolio/digital-content-poster.jpg",
+        description: "Multi-platform visual narratives connecting creator aesthetics with commercial engagement."
+      }
+    ]
+  },
+  {
+    id: "website",
+    title: "Website",
+    subtitle: "Bespoke Digital Homes & Platforms",
+    countLabel: "2 Works",
+    aspect: "stack-aspect-landscape",
+    coverImage: "assets/images/portfolio/website-bluink.jpg",
+    stackPreviews: [
+      "assets/images/portfolio/website-showcase.jpg"
+    ],
+    items: [
+      {
+        id: "web-bluink",
+        title: "Bluink Custom Apparel Platform",
+        category: "Web & Digital Commerce",
+        client: "Bluink Apparel",
+        mediaType: "image",
+        src: "assets/images/portfolio/website-bluink.jpg",
+        description: "Modern glassmorphic apparel platform with interactive quote funnels, fast load times, and custom embroidery galleries."
+      },
+      {
+        id: "web-editorial",
+        title: "Editorial UI & Next-Gen Experience",
+        category: "Interactive Web Experience",
+        client: "Digital Architecture",
+        mediaType: "image",
+        src: "assets/images/portfolio/website-showcase.jpg",
+        description: "Fluid layout architecture, typography-forward minimalism, and responsive multi-device design."
+      }
+    ]
+  }
+];
+
+
