@@ -5,8 +5,6 @@ const PRESETS = [
     id: 'starter',
     name: 'Starter',
     subtitle: 'For brands getting serious about content.',
-    price: '₹24,999',
-    period: '/month',
     isPopular: false,
     features: [
       '1 content shoot (2–3 hours)',
@@ -18,14 +16,12 @@ const PRESETS = [
       'Monthly analytics report',
       '1 revision per reel'
     ],
-    waMessage: "Hi Alight Pixels, I'm interested in the Starter preset (₹24,999/month). Let's book a free call."
+    waMessage: "Hi Alight Pixels, I'm interested in the Starter preset. Let's book a free call."
   },
   {
     id: 'growth',
     name: 'Growth',
     subtitle: 'Our most loved plan for growing brands.',
-    price: '₹49,999',
-    period: '/month',
     isPopular: true,
     badge: 'Most Popular',
     features: [
@@ -40,14 +36,12 @@ const PRESETS = [
       'Priority support',
       '2 revisions per reel'
     ],
-    waMessage: "Hi Alight Pixels, I'm interested in the Growth preset (₹49,999/month). Let's book a free call."
+    waMessage: "Hi Alight Pixels, I'm interested in the Growth preset. Let's book a free call."
   },
   {
     id: 'premium',
     name: 'Premium',
     subtitle: 'A full in-house studio, on demand.',
-    price: '₹89,999',
-    period: '/month',
     isPopular: false,
     features: [
       '4 shoot days/month',
@@ -62,7 +56,7 @@ const PRESETS = [
       'Weekly reporting',
       '2 revisions per reel'
     ],
-    waMessage: "Hi Alight Pixels, I'm interested in the Premium preset (₹89,999/month). Let's book a free call."
+    waMessage: "Hi Alight Pixels, I'm interested in the Premium preset. Let's book a free call."
   }
 ];
 
@@ -100,11 +94,6 @@ export default function ContentPresets() {
                 <div className="preset-header">
                   <h3 className="preset-name">{preset.name}</h3>
                   <p className="preset-subtitle">{preset.subtitle}</p>
-                </div>
-
-                <div className="preset-pricing">
-                  <span className="price-amount">{preset.price}</span>
-                  <span className="price-period">{preset.period}</span>
                 </div>
 
                 <ul className="preset-features-list" aria-label={`${preset.name} plan deliverables`}>

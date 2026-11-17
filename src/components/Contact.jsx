@@ -162,28 +162,6 @@ export default function Contact() {
                   +91 88676 70083
                 </a>
               </div>
-              <div className="channel-row">
-                <span className="channel-label">INSTAGRAM</span>
-                <a
-                  href="https://instagram.com/alightpixels"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="channel-value"
-                >
-                  @alightpixels
-                </a>
-              </div>
-              <div className="channel-row">
-                <span className="channel-label">LINKEDIN</span>
-                <a
-                  href="https://linkedin.com/company/alightpixels"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="channel-value"
-                >
-                  linkedin.com/company/alightpixels
-                </a>
-              </div>
             </div>
           </div>
 
