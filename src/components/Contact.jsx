@@ -84,7 +84,7 @@ export default function Contact() {
       `• *Timeline:* ${formData.timeline}\n\n` +
       `*Project Brief:*\n${formData.message.trim()}`;
 
-    const waUrl = `https://wa.me/917975172872?text=${encodeURIComponent(waText)}`;
+    const waUrl = `https://wa.me/918867670083?text=${encodeURIComponent(waText)}`;
 
     try {
       // 1. Post to local server endpoint
@@ -106,7 +106,7 @@ export default function Contact() {
       // 3. Set success state
       setStatus({
         type: 'success',
-        message: `Thank you, ${formData.name}! Your enquiry has been received and opened in WhatsApp (+91 79751 72872). Our creative team will connect with you shortly.`,
+        message: `Thank you, ${formData.name}! Your enquiry has been received and opened in WhatsApp (+91 88676 70083). Our creative team will connect with you shortly.`,
         waUrl
       });
 
@@ -125,7 +125,7 @@ export default function Contact() {
       window.open(waUrl, '_blank', 'noopener,noreferrer');
       setStatus({
         type: 'success',
-        message: `Your enquiry was prepared for WhatsApp (+91 79751 72872).`,
+        message: `Your enquiry was prepared for WhatsApp (+91 88676 70083).`,
         waUrl
       });
     } finally {
@@ -154,12 +154,12 @@ export default function Contact() {
               <div className="channel-row">
                 <span className="channel-label">WHATSAPP STUDIO</span>
                 <a
-                  href="https://wa.me/917975172872?text=Hello%20Alight%20Pixels%2C%20I%20would%20like%20to%20discuss%20a%20creative%20production%20project."
+                  href="https://wa.me/918867670083?text=Hello%20Alight%20Pixels%2C%20I%20would%20like%20to%20discuss%20a%20creative%20production%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="channel-value"
                 >
-                  +91 79751 72872 <span className="external-arrow" aria-hidden="true">&nearr;</span>
+                  +91 88676 70083
                 </a>
               </div>
               <div className="channel-row">
@@ -170,7 +170,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="channel-value"
                 >
-                  @alightpixels <span className="external-arrow" aria-hidden="true">&nearr;</span>
+                  @alightpixels
                 </a>
               </div>
               <div className="channel-row">
@@ -181,14 +181,9 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="channel-value"
                 >
-                  linkedin.com/company/alightpixels <span className="external-arrow" aria-hidden="true">&nearr;</span>
+                  linkedin.com/company/alightpixels
                 </a>
               </div>
-            </div>
-
-            <div className="studio-location-note">
-              <span className="amber-dot" aria-hidden="true"></span>
-              <span>Available for worldwide productions, commercial shoots &amp; digital commissions.</span>
             </div>
           </div>
 

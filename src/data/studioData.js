@@ -355,15 +355,15 @@ export const PORTFOLIO_STACKS = [
     subtitle: "Cinematic Films & Brand Stories",
     countLabel: "4 Works",
     aspect: "stack-aspect-landscape",
-    coverImage: "assets/images/portfolio/commercial-film-01.jpg",
+    coverImage: "assets/images/portfolio/video-production-poster.jpg",
     stackPreviews: [
-      "assets/images/portfolio/brand-film-01.jpg",
-      "assets/images/portfolio/corporate-film-01.jpg"
+      "assets/images/about/bts-camera-rig.jpg",
+      "assets/images/about/editing-suite.jpg"
     ],
     items: [
       {
         id: "video-reel",
-        title: "Cinematic Production Reel",
+        title: "Commercial Production Reel",
         category: "Commercial Film Production",
         client: "Studio Production Reel",
         mediaType: "video",
@@ -372,31 +372,32 @@ export const PORTFOLIO_STACKS = [
         description: "Large-format cinematography with anamorphic lenses capturing kinetic movement and luxury atmospheres."
       },
       {
-        id: "video-luminescence",
-        title: "Luminescence",
-        category: "Commercial Film",
-        client: "Luxury Showcase",
-        mediaType: "image",
-        src: "assets/images/portfolio/commercial-film-01.jpg",
-        description: "A high-impact visual exploration of light, kinetic motion, and refined brand atmosphere."
+        id: "video-showreel",
+        title: "Studio Cinema Showreel",
+        category: "Brand Films",
+        client: "Alight Pixels Cinema",
+        mediaType: "video",
+        src: "assets/videos/showreel.mp4",
+        poster: "assets/images/about/bts-camera-rig.jpg",
+        description: "Cinematic commercial showreel highlighting dramatic studio lighting and documentary precision."
       },
       {
-        id: "video-origins",
-        title: "Origins of Craft",
-        category: "Brand Documentary",
-        client: "Artisanal Studio",
+        id: "video-camera-rig",
+        title: "Cinema Rig & Prime Optics",
+        category: "Production Craft",
+        client: "Studio Equipment",
         mediaType: "image",
-        src: "assets/images/portfolio/brand-film-01.jpg",
-        description: "Artisanal precision, tactile textures, and natural ambient light across architecture studios."
+        src: "assets/images/about/bts-camera-rig.jpg",
+        description: "Professional cinema camera builds with vintage cinema glass and wireless video transmission."
       },
       {
-        id: "video-architects",
-        title: "Architects of Tomorrow",
-        category: "Corporate Narrative",
-        client: "Design Firm",
+        id: "video-post-suite",
+        title: "Color Grading & Post Suite",
+        category: "Post Production",
+        client: "Editorial Suite",
         mediaType: "image",
-        src: "assets/images/portfolio/corporate-film-01.jpg",
-        description: "Dynamic architectural tracking shots and personal leadership interviews on urban sustainability."
+        src: "assets/images/about/editing-suite.jpg",
+        description: "Precision color grading on calibrated reference monitors with customized film emulation curves."
       }
     ]
   },
@@ -445,12 +446,10 @@ export const PORTFOLIO_STACKS = [
     id: "website",
     title: "Website",
     subtitle: "Bespoke Digital Homes & Platforms",
-    countLabel: "2 Works",
+    countLabel: "1 Platform",
     aspect: "stack-aspect-landscape",
     coverImage: "assets/images/portfolio/website-bluink.jpg",
-    stackPreviews: [
-      "assets/images/portfolio/website-showcase.jpg"
-    ],
+    stackPreviews: [],
     items: [
       {
         id: "web-bluink",
@@ -460,15 +459,6 @@ export const PORTFOLIO_STACKS = [
         mediaType: "image",
         src: "assets/images/portfolio/website-bluink.jpg",
         description: "Modern glassmorphic apparel platform with interactive quote funnels, fast load times, and custom embroidery galleries."
-      },
-      {
-        id: "web-editorial",
-        title: "Editorial UI & Next-Gen Experience",
-        category: "Interactive Web Experience",
-        client: "Digital Architecture",
-        mediaType: "image",
-        src: "assets/images/portfolio/website-showcase.jpg",
-        description: "Fluid layout architecture, typography-forward minimalism, and responsive multi-device design."
       }
     ]
   }

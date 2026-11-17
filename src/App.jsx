@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhoWeAre from './components/WhoWeAre';
 import SelectedWork from './components/SelectedWork';
-import Showreel from './components/Showreel';
+import ContentPresets from './components/ContentPresets';
 import ClientExperiences from './components/ClientExperiences';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -41,8 +41,8 @@ export default function App() {
         {/* 4. WORK PORTFOLIO */}
         <SelectedWork />
 
-        {/* 5. SHOWREEL (Only Dark Section) */}
-        <Showreel />
+        {/* 5. CONTENT PRESETS & PACKAGES */}
+        <ContentPresets />
 
         {/* 6. CLIENT EXPERIENCES */}
         <ClientExperiences />

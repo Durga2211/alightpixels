@@ -227,3 +227,4 @@ export default function StackSwipeModal({ stack, initialIndex = 0, onClose }) {
     </div>
   );
 }
+

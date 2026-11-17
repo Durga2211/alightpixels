@@ -343,12 +343,12 @@ export default function Navbar({ onSelectCategory }) {
               START A PROJECT
             </a>
             <a
-              href="https://wa.me/917975172872"
+              href="https://wa.me/918867670083"
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-wa-link"
             >
-              <span>WhatsApp: +91 79751 72872</span>
+              <span>WhatsApp: +91 88676 70083</span>
             </a>
             <p className="mobile-contact-line">hello@alightpixels.com</p>
           </div>

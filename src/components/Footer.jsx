@@ -68,7 +68,7 @@ export default function Footer({ onSelectCategory }) {
               <li><a href="https://linkedin.com/company/alightpixels" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn</a></li>
               <li><a href="https://youtube.com/@alightpixels" target="_blank" rel="noopener noreferrer" className="footer-link">YouTube</a></li>
               <li><a href="mailto:hello@alightpixels.com" className="footer-link">Email Direct</a></li>
-              <li><a href="https://wa.me/917975172872" target="_blank" rel="noopener noreferrer" className="footer-link">WhatsApp (+91 79751 72872)</a></li>
+              <li><a href="https://wa.me/918867670083" target="_blank" rel="noopener noreferrer" className="footer-link">WhatsApp (+91 88676 70083)</a></li>
             </ul>
           </div>
         </div>
