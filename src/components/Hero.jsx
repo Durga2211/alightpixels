@@ -8,10 +8,14 @@ const SERVICES = [
     description: 'Thoughtful composition, studio lighting, and documentary precision capturing the genuine tactile soul of your brand.',
     deliverables: ['Product Stills', 'Culinary & Beverage', 'Portraits', 'Editorial Lifestyle'],
     categoryFilter: 'Product Photography',
-    mediaType: 'image',
-    mediaSrc: 'assets/images/portfolio/photography-showcase.jpg',
-    duration: 7000,
-    aspect: '16/10'
+    mediaType: 'images',
+    images: [
+      'assets/images/portfolio/photography-boats-original.jpg',
+      'assets/images/portfolio/photography-sadhu-original.jpg'
+    ],
+    mediaSrc: 'assets/images/portfolio/photography-boats-original.jpg',
+    duration: 8000,
+    aspect: 'auto'
   },
   {
     id: 'video-production',
@@ -215,16 +219,31 @@ export default function Hero({ onSelectCategory }) {
             </div>
           </div>
 
-          {/* Right Column: Evolving Respective Work Visual (Pure Attested Proof of Work — NO Overlaid Wordings) */}
+          {/* Right Column: Evolving Respective Work Visual */}
           <div className="hero-right-col">
-            <div className="hero-media-backdrop-sun" aria-hidden="true"></div>
+            {/* Ambient Backdrop Sun - hidden for photography where pure images without background block is requested */}
+            {current.id !== 'photography' && (
+              <div className="hero-media-backdrop-sun" aria-hidden="true"></div>
+            )}
 
             <div
-              className={`hero-evolving-card ${isAnimating ? 'card-exit' : 'card-enter'}`}
+              className={`hero-evolving-card ${current.id === 'photography' ? 'is-pure-photo' : ''} ${isAnimating ? 'card-exit' : 'card-enter'}`}
               key={`card-${current.id}`}
             >
               <div className="evolving-media-inner">
-                {current.mediaType === 'video' ? (
+                {current.id === 'photography' && current.images ? (
+                  <div className="hero-photography-diptych">
+                    {current.images.map((imgSrc, i) => (
+                      <div key={i} className="diptych-frame">
+                        <img
+                          src={imgSrc}
+                          alt={`${current.title} showcase ${i + 1}`}
+                          className="diptych-img"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : current.mediaType === 'video' ? (
                   <video
                     ref={(el) => {
                       videoRef.current = el;

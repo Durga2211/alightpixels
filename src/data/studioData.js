@@ -121,9 +121,24 @@ export const PROJECTS = [
     approach: "Captured with natural dawn light, emphasizing deep earth tones, textured wooden boats, and unhurried spiritual composition.",
     gallery: [
       "assets/images/portfolio/photography-boats-original.jpg",
-      "assets/images/portfolio/photography-showcase.jpg"
+      "assets/images/portfolio/photography-sadhu-original.jpg"
     ],
-    relatedIds: ["culinary-atelier", "solitude-and-vision"]
+    relatedIds: ["sacred-devotion", "culinary-atelier"]
+  },
+  {
+    id: "sacred-devotion",
+    title: "Sacred Devotion & Stillness",
+    category: "Photography",
+    client: "Editorial Commission",
+    aspect: "aspect-4-5",
+    image: "assets/images/portfolio/photography-sadhu-original.jpg",
+    overview: "Intimate cultural documentary photography honoring devotion, tactile vibrant vermilion shrines, and quiet human presence.",
+    approach: "Natural directional sunlight sculpting the warmth of aged textures, vermilion offerings, and meditative human stillness.",
+    gallery: [
+      "assets/images/portfolio/photography-sadhu-original.jpg",
+      "assets/images/portfolio/photography-boats-original.jpg"
+    ],
+    relatedIds: ["tactile-forms", "solitude-and-vision"]
   },
   {
     id: "culinary-atelier",
