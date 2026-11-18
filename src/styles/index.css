@@ -2079,6 +2079,37 @@ h1, h2, h3, h4, .font-serif {
   opacity: 1;
 }
 
+/* Active Selected Folder State */
+.simple-folder-btn.is-active {
+  border-color: #38b6ff;
+  background-color: rgba(56, 182, 255, 0.08);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25),
+              0 0 24px rgba(56, 182, 255, 0.22);
+}
+
+.simple-folder-btn.is-active::before {
+  opacity: 1;
+}
+
+.simple-folder-btn.is-active .folder-icon-stage {
+  transform: scale(1.06);
+}
+
+.simple-folder-btn.is-active .folder-count-pill {
+  background-color: #38b6ff;
+  color: #12100E;
+  border-color: #38b6ff;
+}
+
+.simple-folder-btn.is-active .simple-folder-title {
+  color: #38b6ff;
+}
+
+.simple-folder-btn.is-active .simple-folder-cta {
+  opacity: 1;
+  color: #38b6ff;
+}
+
 /* Clean folder icon stage (pure folder icon with NO text on it) */
 .folder-icon-stage {
   position: relative;
@@ -2194,17 +2225,20 @@ h1, h2, h3, h4, .font-serif {
    VIEW 2: OPENED FOLDER & SUBDIVISIONS VIEW
    ========================================================================== */
 .opened-folder-view {
+  margin-top: clamp(2.5rem, 4.5vw, 3.75rem);
+  padding-top: clamp(2rem, 3.5vw, 3rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   animation: folderFadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes folderFadeIn {
   from {
     opacity: 0;
-    transform: translateY(12px) scale(0.99);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -2214,31 +2248,17 @@ h1, h2, h3, h4, .font-serif {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.25rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.75rem;
   border-bottom: var(--border-hairline);
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
-.btn-back-folders {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  border-radius: 30px;
-  background: rgba(56, 182, 255, 0.12);
-  color: #38b6ff;
-  border: 1px solid rgba(56, 182, 255, 0.35);
+.folder-active-desc {
   font-size: 0.8125rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s var(--ease-editorial);
-}
-
-.btn-back-folders:hover {
-  background: #38b6ff;
-  color: #12100E;
-  transform: translateX(-3px);
-  box-shadow: 0 4px 16px rgba(56, 182, 255, 0.35);
+  color: var(--color-muted);
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .folder-breadcrumbs {
@@ -2258,8 +2278,8 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .folder-breadcrumbs .bc-current {
-  color: var(--color-text);
-  font-weight: 600;
+  color: #38b6ff;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
 }
@@ -2267,56 +2287,6 @@ h1, h2, h3, h4, .font-serif {
 .folder-breadcrumbs .bc-count {
   font-size: 0.8125rem;
   color: var(--color-muted);
-}
-
-/* Subdivisions (Sub-folders Filter Tabs) */
-.folder-subdivisions-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.75rem;
-}
-
-.subdivision-tab {
-  background: var(--color-surface);
-  border: var(--border-hairline);
-  border-radius: 30px;
-  padding: 0.55rem 1.25rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--color-muted);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  transition: all 0.25s var(--ease-editorial);
-}
-
-.subdivision-tab:hover {
-  border-color: var(--color-text);
-  color: var(--color-text);
-  transform: translateY(-1px);
-}
-
-.subdivision-tab.active {
-  background: var(--color-accent);
-  color: #12100E;
-  border-color: var(--color-accent);
-  font-weight: 700;
-  box-shadow: 0 4px 18px rgba(249, 176, 68, 0.4);
-}
-
-.subdivision-tab .tab-folder-glyph {
-  font-size: 0.85rem;
-}
-
-.subdivision-tab .tab-count {
-  background: rgba(0, 0, 0, 0.15);
-  padding: 0.1rem 0.5rem;
-  border-radius: 12px;
-  font-size: 0.6875rem;
-  font-family: var(--font-mono, monospace);
 }
 
 /* Works Grid Inside Opened Folder */
@@ -2334,6 +2304,21 @@ h1, h2, h3, h4, .font-serif {
 
 .folder-work-card {
   width: 100%;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: cardFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .folder-work-card-btn {

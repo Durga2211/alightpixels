@@ -296,10 +296,10 @@ export const PORTFOLIO_FOLDERS = [
     countLabel: "7 Works",
     folderColor: "#1d8cf8",
     subdivisions: ["All", "Product Shoot", "Event Photography", "Cultural Stills"],
-    coverImage: "assets/images/portfolio/photography-og-luxury-perfume.jpg",
+    coverImage: "/assets/images/portfolio/photography-og-luxury-perfume.jpg",
     previewImages: [
-      "assets/images/portfolio/photography-og-luxury-perfume.jpg",
-      "assets/images/portfolio/photography-wedding-bride.jpg"
+      "/assets/images/portfolio/photography-og-luxury-perfume.jpg",
+      "/assets/images/portfolio/photography-wedding-bride.jpg"
     ],
     items: [
       {
@@ -309,7 +309,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Product Shoot",
         client: "OG Beauty Luxury",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-og-luxury-perfume.jpg",
+        src: "/assets/images/portfolio/photography-og-luxury-perfume.jpg",
         description: "Dramatic directional studio lighting, obsidian shadows, and caustic blue refraction celebrating luxury perfume aesthetics."
       },
       {
@@ -319,7 +319,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Event Photography",
         client: "Wedding Commission",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-wedding-bride.jpg",
+        src: "/assets/images/portfolio/photography-wedding-bride.jpg",
         description: "Authentic emotional moments, vibrant red silk saree, and sacred floral canopy procession captured under natural sunlight."
       },
       {
@@ -329,7 +329,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Cultural Stills",
         client: "Editorial Commission",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-boats-original.jpg",
+        src: "/assets/images/portfolio/photography-boats-original.jpg",
         description: "Atmospheric morning light, sacred river stillness, and deep earth tones along the sacred riverbanks."
       },
       {
@@ -339,7 +339,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Cultural Stills",
         client: "Documentary Stills",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-sadhu-original.jpg",
+        src: "/assets/images/portfolio/photography-sadhu-original.jpg",
         description: "Intimate portrait honoring quiet prayer, vermilion devotion, and warm directional sunlight."
       },
       {
@@ -349,7 +349,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Cultural Stills",
         client: "Heritage Series",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-bandmaster.jpg",
+        src: "/assets/images/portfolio/photography-bandmaster.jpg",
         description: "Dignified street portraiture capturing the ceremonial red velvet uniform and heritage cycle rickshaw."
       },
       {
@@ -359,7 +359,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Cultural Stills",
         client: "Cultural Craft",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-vendor.jpg",
+        src: "/assets/images/portfolio/photography-vendor.jpg",
         description: "Vibrant ritual threads, hand-strung beads, and cultural textures outside the temple sanctum."
       },
       {
@@ -369,7 +369,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Cultural Stills",
         client: "Alight Pixels Original",
         mediaType: "image",
-        src: "assets/images/portfolio/photography-ayodhya.jpg",
+        src: "/assets/images/portfolio/photography-ayodhya.jpg",
         description: "A three-tier visual narrative of sacred craft, brass puja artifacts, and peacock feather ceremonies."
       }
     ]
@@ -381,10 +381,10 @@ export const PORTFOLIO_FOLDERS = [
     countLabel: "4 Works",
     folderColor: "#007aff",
     subdivisions: ["All", "Commercial & Corporate", "Reels & Events", "Podcast Production"],
-    coverImage: "assets/images/about/bts-camera-rig.jpg",
+    coverImage: "/assets/images/about/bts-camera-rig.jpg",
     previewImages: [
-      "assets/images/about/bts-camera-rig.jpg",
-      "assets/images/portfolio/photography-wedding-bride.jpg"
+      "/assets/images/about/bts-camera-rig.jpg",
+      "/assets/images/portfolio/photography-wedding-bride.jpg"
     ],
     items: [
       {
@@ -394,8 +394,8 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Reels & Events",
         client: "Wedding & Event Production",
         mediaType: "video",
-        src: "assets/videos/candid-reel-001.mp4",
-        poster: "assets/images/portfolio/photography-wedding-bride.jpg",
+        src: "/assets/videos/candid-reel-001.mp4",
+        poster: "/assets/images/portfolio/photography-wedding-bride.jpg",
         description: "Unposed emotional celebration, cultural richness, and vibrant documentary cinematography crafted for high-impact social reels."
       },
       {
@@ -405,8 +405,8 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Commercial & Corporate",
         client: "Automotive Delivery Showcase",
         mediaType: "video",
-        src: "assets/videos/car-delivery.mp4",
-        poster: "assets/images/about/bts-camera-rig.jpg",
+        src: "/assets/videos/car-delivery.mp4",
+        poster: "/assets/images/about/bts-camera-rig.jpg",
         description: "Dynamic vehicle unveil, cinematic lighting, and celebratory client delivery captured with smooth camera tracking."
       },
       {
@@ -416,8 +416,8 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Podcast Production",
         client: "Podcast Studio",
         mediaType: "video",
-        src: "assets/videos/podcast-reel.mp4",
-        poster: "assets/images/about/editing-suite.jpg",
+        src: "/assets/videos/podcast-reel.mp4",
+        poster: "/assets/images/about/editing-suite.jpg",
         description: "Studio lighting, multi-cam capture, and punchy reel formatting designed for viral episode highlights and digital reach."
       },
       {
@@ -427,8 +427,8 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Commercial & Corporate",
         client: "Studio Production Reel",
         mediaType: "video",
-        src: "assets/videos/video-production-reel.mp4",
-        poster: "assets/images/portfolio/video-production-poster.jpg",
+        src: "/assets/videos/video-production-reel.mp4",
+        poster: "/assets/images/portfolio/video-production-poster.jpg",
         description: "Large-format cinema sensors with vintage lenses capturing kinetic movement, luxury atmospheres, and brand storytelling."
       }
     ]
@@ -440,10 +440,10 @@ export const PORTFOLIO_FOLDERS = [
     countLabel: "3 Works",
     folderColor: "#38b6ff",
     subdivisions: ["All", "Reel Analytics", "Campaign Insights", "Creative Direction"],
-    coverImage: "assets/images/portfolio/social-campaign-01.jpg",
+    coverImage: "/assets/images/portfolio/social-campaign-01.jpg",
     previewImages: [
-      "assets/images/portfolio/digital-content-insights-raw.jpg",
-      "assets/images/portfolio/digital-content-poster.jpg"
+      "/assets/images/portfolio/digital-content-insights-raw.jpg",
+      "/assets/images/portfolio/digital-content-poster.jpg"
     ],
     items: [
       {
@@ -453,8 +453,8 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Reel Analytics",
         client: "Meta Collaboration",
         mediaType: "video",
-        src: "assets/videos/instagram-reel-analytics.mp4",
-        poster: "assets/images/portfolio/digital-content-poster.jpg",
+        src: "/assets/videos/instagram-reel-analytics.mp4",
+        poster: "/assets/images/portfolio/digital-content-poster.jpg",
         description: "13.8K+ impressions, high-retention short-form video content engineered for organic platform virality."
       },
       {
@@ -464,7 +464,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Campaign Insights",
         client: "Audience Growth Campaign",
         mediaType: "image",
-        src: "assets/images/portfolio/social-campaign-01.jpg",
+        src: "/assets/images/portfolio/social-campaign-01.jpg",
         description: "Strategic visual campaign driving measurable audience acquisition, shares, and brand resonance."
       },
       {
@@ -474,7 +474,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Creative Direction",
         client: "Creator Narrative",
         mediaType: "image",
-        src: "assets/images/portfolio/digital-content-poster.jpg",
+        src: "/assets/images/portfolio/digital-content-poster.jpg",
         description: "Multi-platform visual narratives connecting creator aesthetics with commercial engagement."
       }
     ]
@@ -486,9 +486,9 @@ export const PORTFOLIO_FOLDERS = [
     countLabel: "1 Platform",
     folderColor: "#0284c7",
     subdivisions: ["All", "Brand Commerce"],
-    coverImage: "assets/images/portfolio/website-bluink.jpg",
+    coverImage: "/assets/images/portfolio/website-bluink.jpg",
     previewImages: [
-      "assets/images/portfolio/website-bluink.jpg"
+      "/assets/images/portfolio/website-bluink.jpg"
     ],
     items: [
       {
@@ -498,7 +498,7 @@ export const PORTFOLIO_FOLDERS = [
         subdivision: "Brand Commerce",
         client: "Bluink Apparel",
         mediaType: "image",
-        src: "assets/images/portfolio/website-bluink.jpg",
+        src: "/assets/images/portfolio/website-bluink.jpg",
         description: "Modern glassmorphic apparel platform with interactive quote funnels, fast load times, and custom embroidery galleries."
       }
     ]
