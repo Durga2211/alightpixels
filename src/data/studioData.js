@@ -288,24 +288,25 @@ export const TESTIMONIALS = [
   }
 ];
 
-export const PORTFOLIO_STACKS = [
+export const PORTFOLIO_FOLDERS = [
   {
     id: "photography",
     title: "Photography",
     subtitle: "Composition, Light & Cultural Stills",
     countLabel: "7 Works",
-    aspect: "stack-aspect-portrait",
+    folderColor: "#1d8cf8",
+    subdivisions: ["All", "Product Shoot", "Event Photography", "Cultural Stills"],
     coverImage: "assets/images/portfolio/photography-og-luxury-perfume.jpg",
-    stackPreviews: [
-      "assets/images/portfolio/photography-wedding-bride.jpg",
-      "assets/images/portfolio/photography-boats-original.jpg",
-      "assets/images/portfolio/photography-sadhu-original.jpg"
+    previewImages: [
+      "assets/images/portfolio/photography-og-luxury-perfume.jpg",
+      "assets/images/portfolio/photography-wedding-bride.jpg"
     ],
     items: [
       {
         id: "photo-og-perfume",
         title: "OG Luxury — Shadow Perfume",
         category: "Product Shoot",
+        subdivision: "Product Shoot",
         client: "OG Beauty Luxury",
         mediaType: "image",
         src: "assets/images/portfolio/photography-og-luxury-perfume.jpg",
@@ -315,6 +316,7 @@ export const PORTFOLIO_STACKS = [
         id: "photo-wedding-bride",
         title: "Traditional Bridal Procession",
         category: "Event Photography",
+        subdivision: "Event Photography",
         client: "Wedding Commission",
         mediaType: "image",
         src: "assets/images/portfolio/photography-wedding-bride.jpg",
@@ -324,6 +326,7 @@ export const PORTFOLIO_STACKS = [
         id: "photo-boats",
         title: "River Ghat Reflections",
         category: "Atmospheric Location Stills",
+        subdivision: "Cultural Stills",
         client: "Editorial Commission",
         mediaType: "image",
         src: "assets/images/portfolio/photography-boats-original.jpg",
@@ -333,6 +336,7 @@ export const PORTFOLIO_STACKS = [
         id: "photo-sadhu",
         title: "Sacred Devotion & Stillness",
         category: "Cultural Documentary",
+        subdivision: "Cultural Stills",
         client: "Documentary Stills",
         mediaType: "image",
         src: "assets/images/portfolio/photography-sadhu-original.jpg",
@@ -342,6 +346,7 @@ export const PORTFOLIO_STACKS = [
         id: "photo-bandmaster",
         title: "The Brass Bandmaster",
         category: "Editorial Street Portraiture",
+        subdivision: "Cultural Stills",
         client: "Heritage Series",
         mediaType: "image",
         src: "assets/images/portfolio/photography-bandmaster.jpg",
@@ -351,6 +356,7 @@ export const PORTFOLIO_STACKS = [
         id: "photo-vendor",
         title: "Sacred Threads & Beads",
         category: "Documentary Still Life",
+        subdivision: "Cultural Stills",
         client: "Cultural Craft",
         mediaType: "image",
         src: "assets/images/portfolio/photography-vendor.jpg",
@@ -360,6 +366,7 @@ export const PORTFOLIO_STACKS = [
         id: "photo-ayodhya",
         title: "Ayodhya Cultural Stories",
         category: "Visual Narrative Triptych",
+        subdivision: "Cultural Stills",
         client: "Alight Pixels Original",
         mediaType: "image",
         src: "assets/images/portfolio/photography-ayodhya.jpg",
@@ -372,17 +379,19 @@ export const PORTFOLIO_STACKS = [
     title: "Videography",
     subtitle: "Cinematic Films & Brand Stories",
     countLabel: "4 Works",
-    aspect: "stack-aspect-landscape",
-    coverImage: "assets/images/portfolio/video-production-poster.jpg",
-    stackPreviews: [
+    folderColor: "#007aff",
+    subdivisions: ["All", "Commercial & Corporate", "Reels & Events", "Podcast Production"],
+    coverImage: "assets/images/about/bts-camera-rig.jpg",
+    previewImages: [
       "assets/images/about/bts-camera-rig.jpg",
-      "assets/images/about/editing-suite.jpg"
+      "assets/images/portfolio/photography-wedding-bride.jpg"
     ],
     items: [
       {
         id: "video-candid-reel",
         title: "Candid Wedding & Event Reel",
         category: "Reel Editing & Event Video",
+        subdivision: "Reels & Events",
         client: "Wedding & Event Production",
         mediaType: "video",
         src: "assets/videos/candid-reel-001.mp4",
@@ -393,6 +402,7 @@ export const PORTFOLIO_STACKS = [
         id: "video-car-delivery",
         title: "Automotive Delivery Cinema",
         category: "Corporate Video & Commercial",
+        subdivision: "Commercial & Corporate",
         client: "Automotive Delivery Showcase",
         mediaType: "video",
         src: "assets/videos/car-delivery.mp4",
@@ -403,6 +413,7 @@ export const PORTFOLIO_STACKS = [
         id: "video-podcast-reel",
         title: "Studio Podcast Production",
         category: "Podcast Editing & Video",
+        subdivision: "Podcast Production",
         client: "Podcast Studio",
         mediaType: "video",
         src: "assets/videos/podcast-reel.mp4",
@@ -413,6 +424,7 @@ export const PORTFOLIO_STACKS = [
         id: "video-production-reel",
         title: "Commercial Production Reel",
         category: "Commercial Film Production",
+        subdivision: "Commercial & Corporate",
         client: "Studio Production Reel",
         mediaType: "video",
         src: "assets/videos/video-production-reel.mp4",
@@ -426,9 +438,11 @@ export const PORTFOLIO_STACKS = [
     title: "Digital Content",
     subtitle: "Viral Campaigns & Social Analytics",
     countLabel: "3 Works",
-    aspect: "stack-aspect-portrait",
+    folderColor: "#38b6ff",
+    subdivisions: ["All", "Reel Analytics", "Campaign Insights", "Creative Direction"],
     coverImage: "assets/images/portfolio/social-campaign-01.jpg",
-    stackPreviews: [
+    previewImages: [
+      "assets/images/portfolio/digital-content-insights-raw.jpg",
       "assets/images/portfolio/digital-content-poster.jpg"
     ],
     items: [
@@ -436,6 +450,7 @@ export const PORTFOLIO_STACKS = [
         id: "digital-reel",
         title: "Reel Analytics & Reach Engine",
         category: "Short-Form Performance Video",
+        subdivision: "Reel Analytics",
         client: "Meta Collaboration",
         mediaType: "video",
         src: "assets/videos/instagram-reel-analytics.mp4",
@@ -446,6 +461,7 @@ export const PORTFOLIO_STACKS = [
         id: "digital-campaign",
         title: "High-Impact Social Campaign",
         category: "Social Media Strategy",
+        subdivision: "Campaign Insights",
         client: "Audience Growth Campaign",
         mediaType: "image",
         src: "assets/images/portfolio/social-campaign-01.jpg",
@@ -455,6 +471,7 @@ export const PORTFOLIO_STACKS = [
         id: "digital-narrative",
         title: "Omnichannel Brand Stories",
         category: "Creative Direction",
+        subdivision: "Creative Direction",
         client: "Creator Narrative",
         mediaType: "image",
         src: "assets/images/portfolio/digital-content-poster.jpg",
@@ -467,14 +484,18 @@ export const PORTFOLIO_STACKS = [
     title: "Website",
     subtitle: "Bespoke Digital Homes & Platforms",
     countLabel: "1 Platform",
-    aspect: "stack-aspect-landscape",
+    folderColor: "#0284c7",
+    subdivisions: ["All", "Brand Commerce"],
     coverImage: "assets/images/portfolio/website-bluink.jpg",
-    stackPreviews: [],
+    previewImages: [
+      "assets/images/portfolio/website-bluink.jpg"
+    ],
     items: [
       {
         id: "web-bluink",
         title: "Bluink Custom Apparel Platform",
         category: "Web & Digital Commerce",
+        subdivision: "Brand Commerce",
         client: "Bluink Apparel",
         mediaType: "image",
         src: "assets/images/portfolio/website-bluink.jpg",
@@ -483,5 +504,7 @@ export const PORTFOLIO_STACKS = [
     ]
   }
 ];
+
+export const PORTFOLIO_STACKS = PORTFOLIO_FOLDERS;
 
 
