@@ -4,21 +4,12 @@ import StackSwipeModal from './StackSwipeModal';
 
 export default function SelectedWork() {
   const [activeFolderId, setActiveFolderId] = useState(null);
-  const [activeSubdivision, setActiveSubdivision] = useState('All');
   const [modalData, setModalData] = useState(null);
 
   const activeFolder = PORTFOLIO_FOLDERS.find((f) => f.id === activeFolderId);
 
-  // Filter items in opened folder by selected subdivision
-  const displayedItems = activeFolder
-    ? activeSubdivision === 'All'
-      ? activeFolder.items
-      : activeFolder.items.filter((item) => item.subdivision === activeSubdivision)
-    : [];
-
   const handleOpenFolder = (folderId) => {
     setActiveFolderId(folderId);
-    setActiveSubdivision('All');
     const el = document.getElementById('selected-work');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -27,7 +18,6 @@ export default function SelectedWork() {
 
   const handleBackToFolders = () => {
     setActiveFolderId(null);
-    setActiveSubdivision('All');
   };
 
   const handleOpenItemInModal = (folder, itemIndex) => {
@@ -46,80 +36,61 @@ export default function SelectedWork() {
           <h2 className="section-headline" id="work-heading">Stories we've brought to life.</h2>
           <p className="section-subtitle">
             {activeFolder
-              ? `Exploring the ${activeFolder.title} archive. Select a subdivision or click any project to view.`
-              : 'A curated directory of production archives across four core disciplines.'}
+              ? `Viewing the ${activeFolder.title} archive. Click any project to open full-screen.`
+              : 'A selection of projects where creativity meets purpose. Click a folder to explore.'}
           </p>
         </div>
 
         {/* ==============================================================
-            VIEW 1: FOLDER DIRECTORY (Overview of 4 Interactive Folders)
+            VIEW 1: SIMPLE FOLDERS DIRECTORY
+            Minimalist, clean folder icon with text below (as simple as possible)
            ============================================================== */}
         {!activeFolder && (
-          <div className="portfolio-folders-grid" id="work-grid">
+          <div className="simple-folders-row" id="work-grid">
             {PORTFOLIO_FOLDERS.map((folder, idx) => (
-              <article key={folder.id} className="folder-card-item reveal" style={{ '--stagger': idx }}>
+              <div key={folder.id} className="simple-folder-wrapper reveal" style={{ '--stagger': idx }}>
                 <button
                   type="button"
-                  className="folder-interactive-btn"
+                  className="simple-folder-btn"
                   onClick={() => handleOpenFolder(folder.id)}
                   aria-label={`Open ${folder.title} folder containing ${folder.countLabel}`}
                 >
-                  {/* Physical/Digital Folder Container */}
-                  <div className="folder-envelope">
-                    
-                    {/* Folder Back Tab (Mac OS / Reference Style) */}
-                    <div className="folder-back-tab">
-                      <span className="folder-tab-label">DIR // 0{idx + 1}</span>
-                      <img src="assets/images/icons/folder-blue.png" alt="" className="folder-tab-icon" />
-                    </div>
+                  {/* Clean Blue Folder Icon from uploaded reference with no text on it */}
+                  <div className="folder-icon-stage">
+                    <img
+                      src="/assets/images/icons/folder-blue.png"
+                      alt=""
+                      className="simple-folder-img"
+                      loading="lazy"
+                    />
+                    <span className="folder-count-pill">{folder.countLabel}</span>
+                  </div>
 
-                    {/* Inner Paper Sheets / Photo Previews Peeking Out */}
-                    <div className="folder-paper-pocket">
-                      {folder.previewImages && folder.previewImages[1] && (
-                        <div className="folder-paper paper-secondary" aria-hidden="true">
-                          <img src={folder.previewImages[1]} alt="" className="paper-img" loading="lazy" />
-                        </div>
-                      )}
-                      {folder.previewImages && folder.previewImages[0] && (
-                        <div className="folder-paper paper-primary" aria-hidden="true">
-                          <img src={folder.previewImages[0]} alt="" className="paper-img" loading="lazy" />
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Folder Front Flap with Blue Reference Styling */}
-                    <div className="folder-front-flap">
-                      <div className="folder-flap-top">
-                        <div className="folder-icon-wrap">
-                          <img src="assets/images/icons/folder-blue.png" alt="" className="folder-main-icon" />
-                        </div>
-                        <span className="folder-count-badge">{folder.countLabel}</span>
-                      </div>
-
-                      <div className="folder-flap-bottom">
-                        <h3 className="folder-title">{folder.title}</h3>
-                        <p className="folder-sub-desc">{folder.subtitle}</p>
-                        <div className="folder-open-cue">
-                          <span>Open Folder</span>
-                          <span className="cue-arrow" aria-hidden="true">&rarr;</span>
-                        </div>
-                      </div>
-                    </div>
-
+                  {/* Clean Text Label Below Folder Icon */}
+                  <div className="simple-folder-text-wrap">
+                    <h3 className="simple-folder-title">{folder.title}</h3>
+                    <p className="simple-folder-subtitle">{folder.subtitle}</p>
+                    <span className="simple-folder-cta">
+                      <span>Open Folder</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </span>
                   </div>
                 </button>
-              </article>
+              </div>
             ))}
           </div>
         )}
 
         {/* ==============================================================
-            VIEW 2: OPENED FOLDER VIEW (Subdivisions & Portfolio Works)
+            VIEW 2: OPENED FOLDER PORTFOLIO
+            Displays the respective works under that folder
            ============================================================== */}
         {activeFolder && (
           <div className="opened-folder-view">
             
-            {/* Top Breadcrumb & Control Bar */}
+            {/* Top Navigation & Breadcrumb Toolbar */}
             <div className="opened-folder-toolbar">
               <button
                 type="button"
@@ -137,101 +108,70 @@ export default function SelectedWork() {
                 <span className="bc-root">Work Archive</span>
                 <span className="bc-sep">/</span>
                 <span className="bc-current">
-                  <img src="assets/images/icons/folder-blue.png" alt="" className="bc-icon" />
+                  <img src="/assets/images/icons/folder-blue.png" alt="" className="bc-icon" />
                   {activeFolder.title}
                 </span>
                 <span className="bc-count">({activeFolder.countLabel})</span>
               </div>
             </div>
 
-            {/* Subdivisions Filter Tabs (Sub-folders) */}
-            <div className="folder-subdivisions-bar" role="tablist" aria-label={`${activeFolder.title} Subdivisions`}>
-              {activeFolder.subdivisions.map((subdiv) => {
-                const count =
-                  subdiv === 'All'
-                    ? activeFolder.items.length
-                    : activeFolder.items.filter((item) => item.subdivision === subdiv).length;
-                const isActive = activeSubdivision === subdiv;
-
-                return (
-                  <button
-                    key={subdiv}
-                    type="button"
-                    role="tab"
-                    aria-selected={isActive}
-                    className={`subdivision-tab ${isActive ? 'active' : ''}`}
-                    onClick={() => setActiveSubdivision(subdiv)}
-                  >
-                    <span className="tab-folder-glyph" aria-hidden="true">📁</span>
-                    <span className="tab-label">{subdiv}</span>
-                    <span className="tab-count">{count}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Portfolio Grid under the Active Folder / Subdivision */}
+            {/* Portfolio Grid under the Active Folder */}
             <div className="folder-works-grid">
-              {displayedItems.map((item, itemIdx) => {
-                // Find true index in activeFolder.items so modal launches accurately
-                const trueIndex = activeFolder.items.findIndex((i) => i.id === item.id);
-
-                return (
-                  <article key={item.id} className="folder-work-card reveal" style={{ '--stagger': itemIdx % 4 }}>
-                    <button
-                      type="button"
-                      className="folder-work-card-btn"
-                      onClick={() => handleOpenItemInModal(activeFolder, trueIndex)}
-                      aria-haspopup="dialog"
-                      aria-label={`View ${item.title}`}
-                    >
-                      <div className="folder-work-thumb-wrap">
-                        {item.mediaType === 'video' ? (
-                          <div className="video-thumb-container">
-                            <video
-                              src={item.src}
-                              poster={item.poster}
-                              muted
-                              playsInline
-                              preload="metadata"
-                              className="folder-work-media"
-                            />
-                            <div className="video-play-badge" aria-label="Play video">
-                              <span className="play-triangle">▶</span>
-                            </div>
-                          </div>
-                        ) : (
-                          <img
+              {activeFolder.items.map((item, itemIdx) => (
+                <article key={item.id} className="folder-work-card reveal" style={{ '--stagger': itemIdx % 4 }}>
+                  <button
+                    type="button"
+                    className="folder-work-card-btn"
+                    onClick={() => handleOpenItemInModal(activeFolder, itemIdx)}
+                    aria-haspopup="dialog"
+                    aria-label={`View ${item.title}`}
+                  >
+                    <div className="folder-work-thumb-wrap">
+                      {item.mediaType === 'video' ? (
+                        <div className="video-thumb-container">
+                          <video
                             src={item.src}
-                            alt={item.title}
+                            poster={item.poster}
+                            muted
+                            playsInline
+                            preload="metadata"
                             className="folder-work-media"
-                            loading="lazy"
                           />
-                        )}
-
-                        <div className="thumb-hover-overlay">
-                          <span className="overlay-btn-label">
-                            {item.mediaType === 'video' ? 'Play Video' : 'View Full Image'}
-                          </span>
+                          <div className="video-play-badge" aria-label="Play video">
+                            <span className="play-triangle">▶</span>
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        <img
+                          src={item.src}
+                          alt={item.title}
+                          className="folder-work-media"
+                          loading="lazy"
+                        />
+                      )}
 
-                      <div className="folder-work-meta">
-                        <div className="work-meta-top">
-                          <h3 className="folder-work-title">{item.title}</h3>
-                          <span className="folder-work-category">{item.category}</span>
-                        </div>
-                        {item.client && (
-                          <p className="folder-work-client">{item.client}</p>
-                        )}
-                        {item.description && (
-                          <p className="folder-work-desc">{item.description}</p>
-                        )}
+                      <div className="thumb-hover-overlay">
+                        <span className="overlay-btn-label">
+                          {item.mediaType === 'video' ? 'Play Video' : 'View Full Image'}
+                        </span>
                       </div>
-                    </button>
-                  </article>
-                );
-              })}
+                    </div>
+
+                    <div className="folder-work-meta">
+                      <div className="work-meta-top">
+                        <h3 className="folder-work-title">{item.title}</h3>
+                        <span className="folder-work-category">{item.category}</span>
+                      </div>
+                      {item.client && (
+                        <p className="folder-work-client">{item.client}</p>
+                      )}
+                      {item.description && (
+                        <p className="folder-work-desc">{item.description}</p>
+                      )}
+                    </div>
+                  </button>
+                </article>
+              ))}
             </div>
 
             {/* Bottom Return Button */}

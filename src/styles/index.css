@@ -2005,232 +2005,188 @@ h1, h2, h3, h4, .font-serif {
 }
 
 /* ==========================================================================
-   PORTFOLIO FOLDERS & SUBDIVISIONS ARCHIVE (Stories We've Brought To Life)
-   Designed after the classic macOS / Digital Blue Folder Reference
+   MINIMALIST FOLDERS DIRECTORY (Stories We've Brought To Life)
+   Clean desktop folder icon with typography placed cleanly below (no text on folder)
    ========================================================================== */
-.portfolio-folders-grid {
+.simple-folders-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(2rem, 4vw, 3.25rem);
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  margin-top: clamp(2rem, 3.5vw, 3.25rem);
+  align-items: stretch;
 }
 
-@media (max-width: 860px) {
-  .portfolio-folders-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+@media (max-width: 1024px) {
+  .simple-folders-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
   }
 }
 
-.folder-card-item {
-  width: 100%;
+@media (max-width: 560px) {
+  .simple-folders-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
-.folder-interactive-btn {
-  background: transparent;
-  border: none;
-  text-align: left;
+.simple-folder-wrapper {
   width: 100%;
+  display: flex;
+}
+
+.simple-folder-btn {
+  background: var(--color-surface);
+  border: var(--border-hairline);
+  border-radius: var(--radius-card);
+  width: 100%;
+  padding: clamp(2rem, 3vw, 2.75rem) 1.5rem clamp(1.75rem, 2.5vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   cursor: pointer;
-  padding: 0;
   color: inherit;
-  display: block;
-}
-
-/* The Digital Folder Silhouette */
-.folder-envelope {
+  transition: transform 0.4s var(--ease-editorial),
+              border-color 0.35s ease,
+              box-shadow 0.4s var(--ease-editorial),
+              background-color 0.35s ease;
   position: relative;
-  width: 100%;
-  height: clamp(270px, 32vw, 340px);
-  perspective: 1000px;
-  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.28));
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
 }
 
-.folder-interactive-btn:hover .folder-envelope {
-  transform: translateY(-8px);
-  filter: drop-shadow(0 22px 48px rgba(0, 122, 255, 0.25));
-}
-
-/* 1. Folder Back Tab & Back Wall (Darker Blue) */
-.folder-back-tab {
+.simple-folder-btn::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: clamp(140px, 42%, 210px);
-  height: 44px;
-  background: linear-gradient(135deg, #0968ab 0%, #064e83 100%);
-  border-radius: 14px 14px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  z-index: 1;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38b6ff, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
-.folder-tab-label {
-  font-family: var(--font-mono, monospace);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.95);
+.simple-folder-btn:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 182, 255, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28),
+              0 0 32px rgba(56, 182, 255, 0.12);
+  background-color: rgba(56, 182, 255, 0.03);
 }
 
-.folder-tab-icon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
+.simple-folder-btn:hover::before {
+  opacity: 1;
 }
 
-/* 2. Inner Paper Pocket (Photos/Videos Peeking Out) */
-.folder-paper-pocket {
-  position: absolute;
-  top: 22px;
-  inset-x: 1.25rem;
-  height: 60%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.folder-paper {
-  position: absolute;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  background-color: #1a1816;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.folder-paper .paper-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.folder-paper.paper-primary {
-  right: 1.5rem;
-  top: 4px;
-  width: 60%;
-  height: 92%;
-  transform: rotate(2.5deg);
-  z-index: 2;
-}
-
-.folder-paper.paper-secondary {
-  left: 1.25rem;
-  top: 10px;
-  width: 54%;
-  height: 86%;
-  transform: rotate(-3.5deg);
-  z-index: 1;
-  opacity: 0.9;
-  filter: brightness(0.92);
-}
-
-/* Hover: Papers Lift Out of Folder */
-.folder-interactive-btn:hover .folder-paper.paper-primary {
-  transform: translateY(-24px) rotate(4deg) scale(1.02);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
-}
-
-.folder-interactive-btn:hover .folder-paper.paper-secondary {
-  transform: translateY(-20px) rotate(-5.5deg) scale(1.01);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
-}
-
-/* 3. Folder Front Flap (Exact Reference Blue Style) */
-.folder-front-flap {
-  position: absolute;
-  bottom: 0;
-  inset-x: 0;
-  height: 76%;
-  background: linear-gradient(180deg, #38b6ff 0%, #1780cb 100%);
-  border-radius: 4px 16px 16px 16px;
-  z-index: 3;
-  padding: 1.5rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3),
-              inset 0 1px 0 rgba(255, 255, 255, 0.45);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.folder-flap-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.folder-icon-wrap {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.folder-main-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
-}
-
-.folder-count-badge {
-  background: rgba(10, 56, 92, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #ffffff;
-  padding: 0.35rem 0.85rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-}
-
-.folder-flap-bottom {
-  display: flex;
-  flex-direction: column;
-}
-
-.folder-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.3rem;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.folder-sub-desc {
-  font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.92);
-  line-height: 1.45;
-  margin-bottom: 0.85rem;
-}
-
-.folder-open-cue {
+/* Clean folder icon stage (pure folder icon with NO text on it) */
+.folder-icon-stage {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.88;
-  transition: opacity 0.25s, transform 0.25s;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  transition: transform 0.4s var(--ease-editorial);
 }
 
-.folder-interactive-btn:hover .folder-open-cue {
+.simple-folder-btn:hover .folder-icon-stage {
+  transform: scale(1.08) translateY(-3px);
+}
+
+.simple-folder-img {
+  width: clamp(110px, 12vw, 140px);
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.32));
+  transition: filter 0.4s ease;
+}
+
+.simple-folder-btn:hover .simple-folder-img {
+  filter: drop-shadow(0 18px 36px rgba(56, 182, 255, 0.38));
+}
+
+.folder-count-pill {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: rgba(18, 16, 14, 0.92);
+  border: 1px solid rgba(56, 182, 255, 0.5);
+  color: #38b6ff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.simple-folder-btn:hover .folder-count-pill {
+  background-color: #38b6ff;
+  color: #12100E;
+  border-color: #38b6ff;
+  transform: scale(1.05);
+}
+
+/* Clean typography container placed BELOW folder icon */
+.simple-folder-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.simple-folder-title {
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.015em;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.simple-folder-btn:hover .simple-folder-title {
+  color: #38b6ff;
+}
+
+.simple-folder-subtitle {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 240px;
+  min-height: 2.4em;
+}
+
+.simple-folder-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38b6ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.85rem;
+  opacity: 0.82;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.simple-folder-cta svg {
+  transition: transform 0.25s ease;
+}
+
+.simple-folder-btn:hover .simple-folder-cta {
   opacity: 1;
+}
+
+.simple-folder-btn:hover .simple-folder-cta svg {
   transform: translateX(4px);
 }
 
