@@ -417,7 +417,7 @@ export const PORTFOLIO_FOLDERS = [
         client: "Podcast Studio",
         mediaType: "video",
         src: "/assets/videos/podcast-reel.mp4",
-        poster: "/assets/images/about/editing-suite.jpg",
+        poster: "/assets/images/portfolio/podcast-video-poster.jpg",
         description: "Studio lighting, multi-cam capture, and punchy reel formatting designed for viral episode highlights and digital reach."
       },
       {
