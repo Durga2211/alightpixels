@@ -50,9 +50,10 @@ const SERVICES = [
     description: 'Bespoke editorial websites, quiet portfolios, and responsive interactive experiences built with purpose, craft, and speed.',
     deliverables: ['Brand Websites', 'Portfolio Experiences', 'Interactive Design', 'Full-Stack Performance'],
     categoryFilter: 'All',
-    mediaType: 'image',
-    mediaSrc: 'assets/images/portfolio/website-bluink.jpg',
-    duration: 7000,
+    mediaType: 'video',
+    mediaSrc: 'assets/videos/website-showcase.mp4',
+    poster: 'assets/images/portfolio/website-screen-recording-poster.jpg',
+    duration: 10000,
     aspect: '16/10'
   }
 ];

@@ -437,12 +437,11 @@ export const PORTFOLIO_FOLDERS = [
     id: "digital-content",
     title: "Digital Content",
     subtitle: "Viral Campaigns & Social Analytics",
-    countLabel: "3 Works",
+    countLabel: "1 Work",
     folderColor: "#38b6ff",
-    subdivisions: ["All", "Reel Analytics", "Campaign Insights", "Creative Direction"],
-    coverImage: "/assets/images/portfolio/social-campaign-01.jpg",
+    subdivisions: ["All", "Reel Analytics"],
+    coverImage: "/assets/images/portfolio/digital-content-poster.jpg",
     previewImages: [
-      "/assets/images/portfolio/digital-content-insights-raw.jpg",
       "/assets/images/portfolio/digital-content-poster.jpg"
     ],
     items: [
@@ -456,26 +455,6 @@ export const PORTFOLIO_FOLDERS = [
         src: "/assets/videos/instagram-reel-analytics.mp4",
         poster: "/assets/images/portfolio/digital-content-poster.jpg",
         description: "13.8K+ impressions, high-retention short-form video content engineered for organic platform virality."
-      },
-      {
-        id: "digital-campaign",
-        title: "High-Impact Social Campaign",
-        category: "Social Media Strategy",
-        subdivision: "Campaign Insights",
-        client: "Audience Growth Campaign",
-        mediaType: "image",
-        src: "/assets/images/portfolio/social-campaign-01.jpg",
-        description: "Strategic visual campaign driving measurable audience acquisition, shares, and brand resonance."
-      },
-      {
-        id: "digital-narrative",
-        title: "Omnichannel Brand Stories",
-        category: "Creative Direction",
-        subdivision: "Creative Direction",
-        client: "Creator Narrative",
-        mediaType: "image",
-        src: "/assets/images/portfolio/digital-content-poster.jpg",
-        description: "Multi-platform visual narratives connecting creator aesthetics with commercial engagement."
       }
     ]
   },
@@ -486,9 +465,9 @@ export const PORTFOLIO_FOLDERS = [
     countLabel: "1 Platform",
     folderColor: "#0284c7",
     subdivisions: ["All", "Brand Commerce"],
-    coverImage: "/assets/images/portfolio/website-bluink.jpg",
+    coverImage: "/assets/images/portfolio/website-screen-recording-poster.jpg",
     previewImages: [
-      "/assets/images/portfolio/website-bluink.jpg"
+      "/assets/images/portfolio/website-screen-recording-poster.jpg"
     ],
     items: [
       {
@@ -497,8 +476,9 @@ export const PORTFOLIO_FOLDERS = [
         category: "Web & Digital Commerce",
         subdivision: "Brand Commerce",
         client: "Bluink Apparel",
-        mediaType: "image",
-        src: "/assets/images/portfolio/website-bluink.jpg",
+        mediaType: "video",
+        src: "/assets/videos/website-showcase.mp4",
+        poster: "/assets/images/portfolio/website-screen-recording-poster.jpg",
         description: "Modern glassmorphic apparel platform with interactive quote funnels, fast load times, and custom embroidery galleries."
       }
     ]
