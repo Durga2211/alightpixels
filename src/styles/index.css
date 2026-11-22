@@ -2707,6 +2707,16 @@ h1, h2, h3, h4, .font-serif {
   background-color: #000;
 }
 
+.stack-slide-iframe {
+  width: 82vw;
+  max-width: 900px;
+  height: 56vh;
+  border: none;
+  border-radius: 8px;
+  background-color: #000;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
 /* Slide Caption */
 .slide-caption-bar {
   width: 100%;

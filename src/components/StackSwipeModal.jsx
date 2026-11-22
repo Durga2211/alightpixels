@@ -148,7 +148,16 @@ export default function StackSwipeModal({ stack, initialIndex = 0, onClose }) {
           {/* Active Media Container */}
           <div className={`stack-active-slide ${isAnimating ? 'slide-animating' : ''}`}>
             <div className="slide-media-wrapper">
-              {currentItem.mediaType === 'video' ? (
+              {currentItem.embedUrl ? (
+                <iframe
+                  key={currentItem.embedUrl}
+                  src={currentItem.embedUrl}
+                  title={currentItem.title}
+                  className="stack-slide-iframe"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                />
+              ) : currentItem.mediaType === 'video' ? (
                 <video
                   ref={videoRef}
                   key={currentItem.src}
@@ -168,6 +177,7 @@ export default function StackSwipeModal({ stack, initialIndex = 0, onClose }) {
                   alt={currentItem.title}
                   className="stack-slide-image"
                   draggable="false"
+                  referrerPolicy="no-referrer"
                 />
               )}
             </div>

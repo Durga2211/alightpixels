@@ -264,14 +264,24 @@ export default function PortfolioPage({ folderId, onNavigateHome, onSwitchFolder
                     <div className="portfolio-item-media-wrap">
                       {item.mediaType === 'video' ? (
                         <div className="portfolio-video-thumb">
-                          <video
-                            src={item.src}
-                            poster={item.poster}
-                            muted
-                            playsInline
-                            preload="metadata"
-                            className="portfolio-media-element"
-                          />
+                          {item.poster ? (
+                            <img
+                              src={item.poster}
+                              alt={item.title}
+                              className="portfolio-media-element"
+                              loading="lazy"
+                              referrerPolicy="no-referrer"
+                            />
+                          ) : (
+                            <video
+                              src={item.src}
+                              poster={item.poster}
+                              muted
+                              playsInline
+                              preload="metadata"
+                              className="portfolio-media-element"
+                            />
+                          )}
                           <div className="portfolio-video-play-btn" aria-hidden="true">
                             <span className="play-triangle">▶</span>
                           </div>
@@ -282,6 +292,7 @@ export default function PortfolioPage({ folderId, onNavigateHome, onSwitchFolder
                           alt={item.title}
                           className="portfolio-media-element"
                           loading="lazy"
+                          referrerPolicy="no-referrer"
                         />
                       )}
 
