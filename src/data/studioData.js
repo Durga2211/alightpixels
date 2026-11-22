@@ -293,15 +293,192 @@ export const PORTFOLIO_FOLDERS = [
     id: "photography",
     title: "Photography",
     subtitle: "Composition, Light & Cultural Stills",
-    countLabel: "7 Works",
+    countLabel: "3 Sub-folders",
     folderColor: "#1d8cf8",
-    subdivisions: ["All", "Product Shoot", "Event Photography", "Cultural Stills"],
+    hasSubfolders: true,
+    subdivisions: ["All", "Portraits", "Products", "Candid Wedding"],
     coverImage: "/assets/images/portfolio/photography-og-luxury-perfume.jpg",
     previewImages: [
       "/assets/images/portfolio/photography-og-luxury-perfume.jpg",
       "/assets/images/portfolio/photography-wedding-bride.jpg"
     ],
+    subfolders: [
+      {
+        id: "portraits",
+        title: "Portraits",
+        subtitle: "Studio, Editorial & Cultural Portraiture",
+        countLabel: "5 Works",
+        items: [
+          {
+            id: "photo-portrait-01",
+            title: "Editorial Studio Portraiture",
+            category: "Portraits",
+            subdivision: "Studio",
+            client: "Studio Portrait Series",
+            mediaType: "image",
+            src: "/assets/images/portfolio/drive-portrait-dsc0007.jpg",
+            description: "High-contrast directional studio lighting capturing authentic skin texture, calm expression, and editorial silhouette."
+          },
+          {
+            id: "photo-portrait-02",
+            title: "Monochrome Classical Portrait",
+            category: "Portraits",
+            subdivision: "Editorial",
+            client: "Heritage Portrait Series",
+            mediaType: "image",
+            src: "/assets/images/portfolio/drive-portrait-dsc0035.jpg",
+            description: "Timeless black and white tones with soft ambient key lighting highlighting depth and character."
+          },
+          {
+            id: "photo-sadhu",
+            title: "Sacred Devotion & Stillness",
+            category: "Cultural Portraits",
+            subdivision: "Cultural",
+            client: "Documentary Stills",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-sadhu-original.jpg",
+            description: "Intimate portrait honoring quiet prayer, vermilion devotion, and warm directional sunlight."
+          },
+          {
+            id: "photo-bandmaster",
+            title: "The Brass Bandmaster",
+            category: "Street Portraiture",
+            subdivision: "Editorial",
+            client: "Heritage Series",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-bandmaster.jpg",
+            description: "Dignified street portraiture capturing the ceremonial red velvet uniform and heritage cycle rickshaw."
+          },
+          {
+            id: "photo-portrait-contemporary",
+            title: "Contemporary Light & Texture",
+            category: "Editorial Portrait",
+            subdivision: "Studio",
+            client: "Editorial Commission",
+            mediaType: "image",
+            src: "/assets/images/portfolio/portrait-photo-01.jpg",
+            description: "Soft window wrap lighting and muted editorial grading emphasizing natural beauty and human presence."
+          }
+        ]
+      },
+      {
+        id: "products",
+        title: "Products",
+        subtitle: "Commercial Still Life & Brand Packaging",
+        countLabel: "4 Works",
+        items: [
+          {
+            id: "photo-og-perfume",
+            title: "OG Luxury — Shadow Perfume",
+            category: "Product Shoot",
+            subdivision: "Luxury Packaging",
+            client: "OG Beauty Luxury",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-og-luxury-perfume.jpg",
+            description: "Dramatic directional studio lighting, obsidian shadows, and caustic blue refraction celebrating luxury perfume aesthetics."
+          },
+          {
+            id: "photo-product-commercial",
+            title: "Commercial Brand Still Life",
+            category: "Product Photography",
+            subdivision: "Commercial",
+            client: "Commercial Commission",
+            mediaType: "image",
+            src: "/assets/images/portfolio/product-photo-01.jpg",
+            description: "Crisp studio lighting and balanced composition highlighting tactile packaging details and material craftsmanship."
+          },
+          {
+            id: "photo-vendor",
+            title: "Sacred Threads & Beads",
+            category: "Artisanal Craft Still Life",
+            subdivision: "Craft",
+            client: "Cultural Craft Series",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-vendor.jpg",
+            description: "Vibrant ritual threads, hand-strung beads, and cultural textures outside the temple sanctum."
+          },
+          {
+            id: "photo-culinary",
+            title: "Culinary & Beverage Still Life",
+            category: "Beverage & Culinary",
+            subdivision: "Culinary",
+            client: "Hospitality Commission",
+            mediaType: "image",
+            src: "/assets/images/portfolio/food-beverage-01.jpg",
+            description: "Warm directional lighting, organic table composition, and rich textural depth for hospitality branding."
+          }
+        ]
+      },
+      {
+        id: "candid-wedding",
+        title: "Candid Wedding",
+        subtitle: "Traditional Ceremonies, Bridal Moments & Rituals",
+        countLabel: "4 Works",
+        items: [
+          {
+            id: "photo-wedding-bride",
+            title: "Traditional Bridal Procession",
+            category: "Bridal Ceremony",
+            subdivision: "Ceremony",
+            client: "Wedding Commission",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-wedding-bride.jpg",
+            description: "Authentic emotional moments, vibrant red silk saree, and sacred floral canopy procession captured under natural sunlight."
+          },
+          {
+            id: "photo-wedding-rituals",
+            title: "Sacred Ceremonial Rituals",
+            category: "Wedding Rituals",
+            subdivision: "Rituals",
+            client: "Traditional Wedding",
+            mediaType: "image",
+            src: "/assets/images/portfolio/drive-wedding-ceremony.jpg",
+            description: "Vibrant yellow turmeric rituals, sacred laughter, and intimate family blessings captured documentary style."
+          },
+          {
+            id: "photo-ayodhya",
+            title: "Ayodhya Cultural Stories",
+            category: "Visual Narrative Triptych",
+            subdivision: "Ceremony",
+            client: "Alight Pixels Original",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-ayodhya.jpg",
+            description: "A three-tier visual narrative of sacred craft, brass puja artifacts, and peacock feather ceremonies."
+          },
+          {
+            id: "photo-boats",
+            title: "River Ghat Reflections",
+            category: "Atmospheric Location Stills",
+            subdivision: "Atmospheric",
+            client: "Editorial Commission",
+            mediaType: "image",
+            src: "/assets/images/portfolio/photography-boats-original.jpg",
+            description: "Atmospheric morning light, sacred river stillness, and deep earth tones along the sacred riverbanks."
+          }
+        ]
+      }
+    ],
     items: [
+      {
+        id: "photo-portrait-01",
+        title: "Editorial Studio Portraiture",
+        category: "Portraits",
+        subdivision: "Studio",
+        client: "Studio Portrait Series",
+        mediaType: "image",
+        src: "/assets/images/portfolio/drive-portrait-dsc0007.jpg",
+        description: "High-contrast directional studio lighting capturing authentic skin texture, calm expression, and editorial silhouette."
+      },
+      {
+        id: "photo-portrait-02",
+        title: "Monochrome Classical Portrait",
+        category: "Portraits",
+        subdivision: "Editorial",
+        client: "Heritage Portrait Series",
+        mediaType: "image",
+        src: "/assets/images/portfolio/drive-portrait-dsc0035.jpg",
+        description: "Timeless black and white tones with soft ambient key lighting highlighting depth and character."
+      },
       {
         id: "photo-og-perfume",
         title: "OG Luxury — Shadow Perfume",
@@ -321,6 +498,16 @@ export const PORTFOLIO_FOLDERS = [
         mediaType: "image",
         src: "/assets/images/portfolio/photography-wedding-bride.jpg",
         description: "Authentic emotional moments, vibrant red silk saree, and sacred floral canopy procession captured under natural sunlight."
+      },
+      {
+        id: "photo-wedding-rituals",
+        title: "Sacred Ceremonial Rituals",
+        category: "Wedding Rituals",
+        subdivision: "Rituals",
+        client: "Traditional Wedding",
+        mediaType: "image",
+        src: "/assets/images/portfolio/drive-wedding-ceremony.jpg",
+        description: "Vibrant yellow turmeric rituals, sacred laughter, and intimate family blessings captured documentary style."
       },
       {
         id: "photo-boats",
@@ -378,13 +565,136 @@ export const PORTFOLIO_FOLDERS = [
     id: "videography",
     title: "Videography",
     subtitle: "Cinematic Films & Brand Stories",
-    countLabel: "4 Works",
+    countLabel: "4 Sub-folders",
     folderColor: "#007aff",
-    subdivisions: ["All", "Commercial & Corporate", "Reels & Events", "Podcast Production"],
+    hasSubfolders: true,
+    subdivisions: ["All", "Vehicle Delivery", "Wedding", "Podcast & Talking Head", "Commercial Films"],
     coverImage: "/assets/images/about/bts-camera-rig.jpg",
     previewImages: [
       "/assets/images/about/bts-camera-rig.jpg",
       "/assets/images/portfolio/photography-wedding-bride.jpg"
+    ],
+    subfolders: [
+      {
+        id: "vehicle-delivery",
+        title: "Vehicle Delivery",
+        subtitle: "Automotive & Luxury Delivery Cinema",
+        countLabel: "2 Films",
+        items: [
+          {
+            id: "video-car-delivery",
+            title: "Automotive Delivery Cinema",
+            category: "Automotive Delivery",
+            subdivision: "Automotive",
+            client: "Automotive Delivery Showcase",
+            mediaType: "video",
+            src: "/assets/videos/car-delivery.mp4",
+            poster: "/assets/images/about/bts-camera-rig.jpg",
+            description: "Dynamic vehicle unveil, cinematic lighting, and celebratory client delivery captured with smooth camera tracking."
+          },
+          {
+            id: "video-bike-delivery",
+            title: "Superbike Delivery Experience",
+            category: "Vehicle Delivery",
+            subdivision: "Motorsport",
+            client: "Motorcycle Studio Delivery",
+            mediaType: "video",
+            src: "/assets/videos/car-delivery.mp4",
+            poster: "/assets/images/about/bts-camera-rig.jpg",
+            description: "High-octane exhaust notes, golden hour reveal, and celebratory customer handover film."
+          }
+        ]
+      },
+      {
+        id: "wedding",
+        title: "Wedding",
+        subtitle: "Candid Wedding Reels & Bridal Celebrations",
+        countLabel: "2 Films",
+        items: [
+          {
+            id: "video-candid-reel",
+            title: "Candid Wedding & Bridal Cinema",
+            category: "Wedding Cinema",
+            subdivision: "Wedding",
+            client: "Wedding & Event Production",
+            mediaType: "video",
+            src: "/assets/videos/candid-reel-001.mp4",
+            poster: "/assets/images/portfolio/photography-wedding-bride.jpg",
+            description: "Unposed emotional celebration, cultural richness, and vibrant documentary cinematography crafted for high-impact social reels."
+          },
+          {
+            id: "video-ceremony-reel",
+            title: "Traditional Sangeet & Baraat Reel",
+            category: "Wedding Celebration",
+            subdivision: "Celebration",
+            client: "Celebration Film",
+            mediaType: "video",
+            src: "/assets/videos/candid-reel-001.mp4",
+            poster: "/assets/images/portfolio/photography-wedding-bride.jpg",
+            description: "Dynamic dance floor energy, slow motion flower showers, and cinematic sound design."
+          }
+        ]
+      },
+      {
+        id: "podcast-talking-head",
+        title: "Podcast & Talking Head",
+        subtitle: "Studio Podcasts & Creator Conversations",
+        countLabel: "2 Films",
+        items: [
+          {
+            id: "video-podcast-reel",
+            title: "Studio Podcast Production",
+            category: "Podcast & Interview Video",
+            subdivision: "Podcast",
+            client: "Podcast Studio",
+            mediaType: "video",
+            src: "/assets/videos/podcast-reel.mp4",
+            poster: "/assets/images/portfolio/podcast-video-poster.jpg",
+            description: "Studio multi-cam capture, clean audio routing, and punchy formatting designed for viral episode highlights and digital reach."
+          },
+          {
+            id: "video-talking-head",
+            title: "Creator Thought Leadership Reel",
+            category: "Talking Head Content",
+            subdivision: "Creator",
+            client: "Executive Founder Series",
+            mediaType: "video",
+            src: "/assets/videos/podcast-reel.mp4",
+            poster: "/assets/images/portfolio/podcast-video-poster.jpg",
+            description: "Direct-to-camera storytelling with kinetic b-roll overlays, kinetic typography, and broadcast-grade audio."
+          }
+        ]
+      },
+      {
+        id: "commercial-films",
+        title: "Commercial & Event Films",
+        subtitle: "Cinematic Commercials, Walkthroughs & Brand Films",
+        countLabel: "2 Films",
+        items: [
+          {
+            id: "video-production-reel",
+            title: "Commercial Production Reel",
+            category: "Commercial Film Production",
+            subdivision: "Commercial",
+            client: "Studio Production Reel",
+            mediaType: "video",
+            src: "/assets/videos/video-production-reel.mp4",
+            poster: "/assets/images/portfolio/video-production-poster.jpg",
+            description: "Large-format cinema sensors with vintage lenses capturing kinetic movement, luxury atmospheres, and brand storytelling."
+          },
+          {
+            id: "video-hero-reel",
+            title: "Brand Anthem & Showreel Cinema",
+            category: "Brand Anthem",
+            subdivision: "Anthem",
+            client: "Alight Pixels Cinema",
+            mediaType: "video",
+            src: "/assets/videos/hero-reel.mp4",
+            poster: "/assets/images/about/bts-camera-rig.jpg",
+            description: "High-contrast cinema visuals, sound-designed cuts, and evocative visual pacing."
+          }
+        ]
+      }
     ],
     items: [
       {
