@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import StackSwipeModal from './StackSwipeModal';
 
-export const SHOWCASE_ITEMS = [
+const SHOWCASE_ITEMS = [
   // COLUMN 1
   {
     id: 'cafe-brand-story',
@@ -129,7 +129,7 @@ export const SHOWCASE_ITEMS = [
   }
 ];
 
-export const FILTER_CATEGORIES = [
+const FILTER_CATEGORIES = [
   'All',
   'Photography',
   'Videos',
