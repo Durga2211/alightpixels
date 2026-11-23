@@ -283,38 +283,6 @@ export default function SelectedWork({ onOpenPortfolio }) {
           </div>
         </div>
 
-        {/* Refined Client Archive Explorer Banner */}
-        <div className="portfolio-archive-strip">
-          <div className="archive-strip-text">
-            <h4 className="archive-strip-title">Explore Complete Google Drive Archives</h4>
-            <p className="archive-strip-sub">
-              Over 140+ cataloged production works, dedicated sub-folders, and raw high-resolution stills.
-            </p>
-          </div>
-          <div className="archive-strip-links">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => onOpenPortfolio && onOpenPortfolio('photography')}
-            >
-              <span>Photography Folders (106)</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline"
-              onClick={() => onOpenPortfolio && onOpenPortfolio('videography')}
-            >
-              <span>Videography Folders (36)</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-          </div>
-        </div>
-
       </div>
 
       {/* Interactive Swipe Modal Lightbox */}

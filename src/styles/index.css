@@ -2259,46 +2259,6 @@ h1, h2, h3, h4, .font-serif {
   letter-spacing: -0.015em;
 }
 
-/* Bottom Strip: Complete Archive Explorer */
-.portfolio-archive-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: clamp(1.75rem, 3vw, 2.5rem);
-  background: var(--color-surface);
-  border: var(--border-hairline);
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.archive-strip-text {
-  max-width: 580px;
-}
-
-.archive-strip-title {
-  font-size: clamp(1.2rem, 1.5vw, 1.45rem);
-  font-weight: 700;
-  color: var(--color-text);
-  margin: 0 0 0.35rem;
-  letter-spacing: -0.015em;
-}
-
-.archive-strip-sub {
-  font-size: 0.875rem;
-  color: var(--color-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-
-.archive-strip-links {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  flex-wrap: wrap;
-}
-
 /* ==========================================================================
    MINIMALIST FOLDERS DIRECTORY (Stories We've Brought To Life)
    Clean desktop folder icon with typography placed cleanly below (no text on folder)
