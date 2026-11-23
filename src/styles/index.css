@@ -3819,48 +3819,144 @@ h1, h2, h3, h4, .font-serif {
 }
 
 /* ==========================================================================
-   7. WHY US
-   Four text blocks, NO icons, clean editorial typography
+   7. WHY CHOOSE US
+   Built for brands that refuse to blend in
+   6 dark cards in a 3-column x 2-row grid with amber icons & interactive glow
    ========================================================================== */
-.why-us-section {
+.why-choose-us-section {
+  padding-top: clamp(4.5rem, 7.5vw, 7.5rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
   background-color: var(--color-bg);
 }
 
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+.why-choose-header {
+  text-align: center;
+  margin-bottom: clamp(2.75rem, 5vw, 4.5rem);
 }
 
-.why-card {
-  border-top: var(--border-hairline);
-  padding-top: 2rem;
+.why-choose-eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.why-choose-headline {
+  font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.why-choose-accent {
+  color: var(--color-accent);
+  background: linear-gradient(135deg, #F9B044 0%, #FFAF38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2vw, 1.85rem);
+}
+
+@media (max-width: 991px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.why-choose-card {
+  border-radius: 20px;
+  background-color: #161413;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: clamp(2rem, 2.8vw, 2.75rem) clamp(1.75rem, 2.5vw, 2.25rem);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  transition: transform 0.4s var(--ease-editorial);
+  align-items: flex-start;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.why-card:hover {
-  transform: translateY(-3px);
+:root[data-theme="light"] .why-choose-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(35, 31, 32, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-.why-index {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+.why-choose-card:hover,
+.why-choose-card.is-featured {
+  transform: translateY(-5px);
+  border-color: rgba(249, 176, 68, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.42),
+              0 0 32px rgba(249, 176, 68, 0.16);
+  background-color: #191614;
+}
+
+:root[data-theme="light"] .why-choose-card:hover,
+:root[data-theme="light"] .why-choose-card.is-featured {
+  background-color: #FFFFFF;
+  border-color: rgba(249, 176, 68, 0.6);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08),
+              0 0 24px rgba(249, 176, 68, 0.18);
+}
+
+.why-card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(249, 176, 68, 0.1);
+  border: 1px solid rgba(249, 176, 68, 0.25);
   color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
 }
 
-.why-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.2;
+.why-choose-card:hover .why-card-icon-wrap,
+.why-choose-card.is-featured .why-card-icon-wrap {
+  transform: scale(1.08);
+  background: rgba(249, 176, 68, 0.2);
+  border-color: rgba(249, 176, 68, 0.45);
 }
 
-.why-text {
+.why-card-title {
+  font-size: clamp(1.2rem, 1.4vw, 1.35rem);
+  font-weight: 600;
+  color: var(--color-text, #FCFBF8);
+  margin: 0 0 0.65rem;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.why-card-desc {
   font-size: 0.9375rem;
-  line-height: 1.65;
-  color: var(--color-muted);
+  color: var(--color-muted, #A39E96);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ==========================================================================

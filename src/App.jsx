@@ -3,6 +3,7 @@ import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhoWeAre from './components/WhoWeAre';
+import WhyUs from './components/WhyUs';
 import SelectedWork from './components/SelectedWork';
 import PortfolioPage from './components/PortfolioPage';
 import ContentPresets from './components/ContentPresets';
@@ -126,7 +127,10 @@ export default function App() {
         {/* 3. WHO WE ARE / ABOUT */}
         <WhoWeAre />
 
-        {/* 4. WORK PORTFOLIO (4 Clean Folders — Click opens dedicated page) */}
+        {/* 4. WHY CHOOSE US — Built for brands that refuse to blend in */}
+        <WhyUs />
+
+        {/* 5. WORK PORTFOLIO (Masonry cards showcase) */}
         <SelectedWork onOpenPortfolio={navigateToPortfolio} />
 
         {/* 5. CONTENT PRESETS & PACKAGES */}

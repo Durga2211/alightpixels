@@ -145,6 +145,7 @@ export default function Hero({ onSelectCategory }) {
       onMouseEnter={() => setAutoplayPaused(true)}
       onMouseLeave={() => setAutoplayPaused(false)}
     >
+      <div id="services" style={{ position: 'absolute', top: 0, left: 0 }} aria-hidden="true"></div>
       {/* Background Subtle Ambient Glow / Sun Motif */}
       <div className="hero-flipping-ambient" aria-hidden="true">
         <div className="hero-sun-glow"></div>

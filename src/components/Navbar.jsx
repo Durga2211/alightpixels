@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function Navbar({ onSelectCategory }) {
+export default function Navbar({ onSelectCategory, onNavigateSection }) {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -83,6 +83,20 @@ export default function Navbar({ onSelectCategory }) {
     setMobileOpen(false);
     if (onSelectCategory) {
       onSelectCategory(category);
+    }
+  };
+
+  const handleNavLinkClick = (e, targetId) => {
+    closeMobile();
+    if (onNavigateSection) {
+      e.preventDefault();
+      onNavigateSection(targetId);
+      return;
+    }
+    const el = document.getElementById(targetId);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -195,12 +209,23 @@ export default function Navbar({ onSelectCategory }) {
 
             {/* 2. OUR SERVICES */}
             <li className="nav-item">
-              <a href="#hero" className="nav-link">OUR SERVICES</a>
+              <a href="#services" className="nav-link" onClick={(e) => handleNavLinkClick(e, 'services')}>
+                OUR SERVICES
+              </a>
             </li>
 
             {/* 3. ABOUT US */}
             <li className="nav-item">
-              <a href="#about" className="nav-link">ABOUT US</a>
+              <a href="#about" className="nav-link" onClick={(e) => handleNavLinkClick(e, 'about')}>
+                ABOUT US
+              </a>
+            </li>
+
+            {/* 4. CONTACT US */}
+            <li className="nav-item">
+              <a href="#contact" className="nav-link" onClick={(e) => handleNavLinkClick(e, 'contact')}>
+                CONTACT US
+              </a>
             </li>
 
           </ul>
@@ -250,7 +275,7 @@ export default function Navbar({ onSelectCategory }) {
             )}
           </button>
 
-          <a href="#contact" className="btn btn-primary nav-cta btn-pill">
+          <a href="#contact" className="btn btn-primary nav-cta btn-pill" onClick={(e) => handleNavLinkClick(e, 'contact')}>
             START A PROJECT
           </a>
           <button
@@ -287,8 +312,9 @@ export default function Navbar({ onSelectCategory }) {
                 ))}
               </div>
             </li>
-            <li><a href="#hero" className="mobile-nav-link" onClick={closeMobile}>OUR SERVICES</a></li>
-            <li><a href="#about" className="mobile-nav-link" onClick={closeMobile}>ABOUT US</a></li>
+            <li><a href="#services" className="mobile-nav-link" onClick={(e) => handleNavLinkClick(e, 'services')}>OUR SERVICES</a></li>
+            <li><a href="#about" className="mobile-nav-link" onClick={(e) => handleNavLinkClick(e, 'about')}>ABOUT US</a></li>
+            <li><a href="#contact" className="mobile-nav-link" onClick={(e) => handleNavLinkClick(e, 'contact')}>CONTACT US</a></li>
           </ul>
           <div className="mobile-drawer-footer">
             <div className="mobile-theme-row">

@@ -64,7 +64,10 @@ export default function PortfolioPage({ folderId, onNavigateHome, onSwitchFolder
   return (
     <div className="portfolio-page-wrapper">
       {/* Site Navbar */}
-      <Navbar onSelectCategory={(cat) => onNavigateHome('selected-work')} />
+      <Navbar
+        onSelectCategory={(cat) => onNavigateHome('selected-work')}
+        onNavigateSection={(targetId) => onNavigateHome(targetId)}
+      />
 
       <main className="portfolio-page-main" id="main-content">
         {/* Top Breadcrumb & Return Bar */}
