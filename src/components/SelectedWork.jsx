@@ -45,7 +45,7 @@ const SHOWCASE_ITEMS = [
     id: 'avenia-identity-system',
     title: 'Avenia Identity System',
     category: 'BRANDING',
-    filterTags: ['All', 'Branding', 'Website'],
+    filterTags: ['All', 'Branding'],
     aspect: 'aspect-square',
     column: 2,
     mediaType: 'video',
@@ -57,7 +57,7 @@ const SHOWCASE_ITEMS = [
     id: 'fitness-campaign',
     title: 'Fitness Campaign',
     category: 'COMMERCIAL SHOOTS',
-    filterTags: ['All', 'Commercial Shoots', 'Videos', 'Social Media'],
+    filterTags: ['All', 'Commercial Shoots', 'Videos'],
     aspect: 'aspect-tall',
     column: 2,
     mediaType: 'video',
@@ -66,16 +66,16 @@ const SHOWCASE_ITEMS = [
     description: 'Raw kinetic movement, high-energy lighting, and performance-driven commercial cinematography.'
   },
   {
-    id: 'reels-that-convert',
-    title: 'Reels That Convert',
-    category: 'SOCIAL MEDIA',
-    filterTags: ['All', 'Social Media', 'Videos'],
-    aspect: 'aspect-phone',
+    id: 'sacred-devotion',
+    title: 'Sacred Devotion & Stillness',
+    category: 'PHOTOGRAPHY',
+    filterTags: ['All', 'Photography'],
+    aspect: 'aspect-portrait',
     column: 2,
-    mediaType: 'video',
-    src: '/assets/videos/instagram-reel-analytics.mp4',
-    poster: '/assets/images/portfolio/reels-convert-poster.jpg',
-    description: 'Engineered for organic reach and high audience retention with motion graphics and viral pacing.'
+    mediaType: 'image',
+    src: '/assets/images/portfolio/photography-sadhu-original.jpg',
+    thumbnail: '/assets/images/portfolio/photography-sadhu-original.jpg',
+    description: 'Intimate documentary photography honoring meditative quiet, vermilion devotion, and warm directional sunlight.'
   },
 
   // COLUMN 3
@@ -92,40 +92,28 @@ const SHOWCASE_ITEMS = [
     description: 'Atmospheric natural lighting, architectural symmetry, and textured tactile materials.'
   },
   {
-    id: 'restaurant-commercial',
-    title: 'Restaurant Commercial',
-    category: 'COMMERCIAL SHOOTS',
-    filterTags: ['All', 'Commercial Shoots', 'Videos'],
+    id: 'wedding-photoshoot',
+    title: 'Wedding Photoshoot',
+    category: 'WEDDING',
+    filterTags: ['All', 'Photography', 'Videos', 'Commercial Shoots'],
     aspect: 'aspect-landscape',
     column: 3,
     mediaType: 'video',
     src: '/assets/videos/candid-reel-001.mp4',
     poster: '/assets/images/portfolio/photography-wedding-bride.jpg',
-    description: 'Culinary mastery, sizzle close-ups, and immersive ambient audio crafted for luxury dining.'
+    description: 'Authentic ceremonial celebration, vibrant red silk saree, and sacred floral canopy procession captured under natural sunlight.'
   },
   {
     id: 'studio-podcast-series',
     title: 'Studio Podcast Series',
     category: 'VIDEOS',
-    filterTags: ['All', 'Videos', 'Social Media'],
+    filterTags: ['All', 'Videos'],
     aspect: 'aspect-landscape',
     column: 3,
     mediaType: 'video',
     src: '/assets/videos/podcast-reel.mp4',
     poster: '/assets/images/portfolio/podcast-video-poster.jpg',
     description: 'Broadcast multi-camera setup, pristine audio fidelity, and short-form conversational highlights.'
-  },
-  {
-    id: 'editorial-heritage-stills',
-    title: 'Editorial Heritage Stills',
-    category: 'PHOTOGRAPHY',
-    filterTags: ['All', 'Photography'],
-    aspect: 'aspect-portrait',
-    column: 3,
-    mediaType: 'image',
-    src: '/assets/images/portfolio/drive-portrait-dsc0007.jpg',
-    thumbnail: '/assets/images/portfolio/drive-portrait-dsc0007.jpg',
-    description: 'High-contrast studio portraiture capturing authentic skin texture, calm expression, and editorial silhouette.'
   }
 ];
 
@@ -134,7 +122,6 @@ const FILTER_CATEGORIES = [
   'Photography',
   'Videos',
   'Branding',
-  'Social Media',
   'Product Shoots',
   'Commercial Shoots'
 ];

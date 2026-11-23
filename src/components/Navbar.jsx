@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 
 export default function Navbar({ onSelectCategory, onNavigateSection }) {
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -12,7 +11,6 @@ export default function Navbar({ onSelectCategory, onNavigateSection }) {
     }
     return 'light';
   });
-  const dropdownRef = useRef(null);
 
   useEffect(() => {
     // Sync initial theme attribute and listen to system theme changes
@@ -55,36 +53,16 @@ export default function Navbar({ onSelectCategory, onNavigateSection }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdown on outside click or escape
+  // Close mobile drawer on escape
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
-    };
-
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        setDropdownOpen(false);
         setMobileOpen(false);
       }
     };
-
-    document.addEventListener('mousedown', handleClickOutside);
     window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
-  const handleWorkCategoryClick = (category) => {
-    setDropdownOpen(false);
-    setMobileOpen(false);
-    if (onSelectCategory) {
-      onSelectCategory(category);
-    }
-  };
 
   const handleNavLinkClick = (e, targetId) => {
     closeMobile();
@@ -102,35 +80,7 @@ export default function Navbar({ onSelectCategory, onNavigateSection }) {
 
   const closeMobile = () => {
     setMobileOpen(false);
-    setDropdownOpen(false);
   };
-
-  const WORK_CATEGORIES = [
-    {
-      label: "OUR VIDEOGRAPHY",
-      title: "Commercial & Brand Films",
-      category: "Commercial Films",
-      image: "assets/images/service-video.jpg"
-    },
-    {
-      label: "OUR PHOTOGRAPHY",
-      title: "Editorial & Product Stills",
-      category: "Product Photography",
-      image: "assets/images/service-photo.jpg"
-    },
-    {
-      label: "DIGITAL CONTENT",
-      title: "Campaigns & Narrative Media",
-      category: "Social Media Campaigns",
-      image: "assets/images/service-digital.jpg"
-    },
-    {
-      label: "WEBSITE EXPERIENCE",
-      title: "Digital Homes & Design",
-      category: "All",
-      image: "assets/images/portfolio/website-showcase.jpg"
-    }
-  ];
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`} id="site-header">
@@ -150,61 +100,19 @@ export default function Navbar({ onSelectCategory, onNavigateSection }) {
           />
         </a>
 
-        {/* Desktop Navigation: EXACTLY Our Work (with dropdown), Our Services, About Us */}
+        {/* Desktop Navigation: Our Work, Our Services, About Us, Contact Us */}
         <nav className="nav-menu" id="primary-nav" aria-label="Primary Navigation">
           <ul className="nav-list">
             
-            {/* 1. OUR WORK (With Dropdown Mega-Menu) */}
-            <li
-              className={`nav-item dropdown-item ${dropdownOpen ? 'open' : ''}`}
-              ref={dropdownRef}
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-            >
-              <button
-                type="button"
-                className="nav-link dropdown-toggle"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                aria-expanded={dropdownOpen}
-                aria-haspopup="true"
+            {/* 1. OUR WORK */}
+            <li className="nav-item">
+              <a
+                href="#selected-work"
+                className="nav-link"
+                onClick={(e) => handleNavLinkClick(e, 'selected-work')}
               >
-                <span>OUR WORK</span>
-                <span className={`dropdown-caret ${dropdownOpen ? 'rotated' : ''}`} aria-hidden="true">
-                  ▾
-                </span>
-              </button>
-
-              {/* Mega-Menu Dropdown Panel (4 Columns as in Reference) */}
-              <div className={`mega-menu-dropdown ${dropdownOpen ? 'active' : ''}`} role="region" aria-label="Our Work categories">
-                <div className="mega-menu-inner container">
-                  <div className="mega-menu-grid">
-                    {WORK_CATEGORIES.map((item) => (
-                      <a
-                        key={item.label}
-                        href="#selected-work"
-                        className="mega-menu-card"
-                        data-filter={item.category}
-                        onClick={() => handleWorkCategoryClick(item.category)}
-                      >
-                        <div className="mega-card-header">
-                          <span className="mega-card-label">{item.label}</span>
-                          <span className="mega-card-explore">
-                            EXPLORE <span className="explore-arrow">&rarr;</span>
-                          </span>
-                        </div>
-                        <div className="mega-card-thumb-wrap">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="mega-card-thumb"
-                            loading="lazy"
-                          />
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
+                OUR WORK
+              </a>
             </li>
 
             {/* 2. OUR SERVICES */}
@@ -297,20 +205,13 @@ export default function Navbar({ onSelectCategory, onNavigateSection }) {
         <div className="mobile-drawer-inner">
           <ul className="mobile-nav-list">
             <li>
-              <div className="mobile-section-header">OUR WORK</div>
-              <div className="mobile-subgrid">
-                {WORK_CATEGORIES.map((cat) => (
-                  <a
-                    key={cat.label}
-                    href="#selected-work"
-                    className="mobile-sublink"
-                    onClick={() => handleWorkCategoryClick(cat.category)}
-                  >
-                    <span>{cat.label}</span>
-                    <span className="explore-arrow">&rarr;</span>
-                  </a>
-                ))}
-              </div>
+              <a
+                href="#selected-work"
+                className="mobile-nav-link"
+                onClick={(e) => handleNavLinkClick(e, 'selected-work')}
+              >
+                OUR WORK
+              </a>
             </li>
             <li><a href="#services" className="mobile-nav-link" onClick={(e) => handleNavLinkClick(e, 'services')}>OUR SERVICES</a></li>
             <li><a href="#about" className="mobile-nav-link" onClick={(e) => handleNavLinkClick(e, 'about')}>ABOUT US</a></li>

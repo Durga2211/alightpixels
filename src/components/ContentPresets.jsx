@@ -14,7 +14,8 @@ const PRESETS = [
       'Caption writing',
       'Posting and scheduling',
       'Monthly analytics report',
-      '1 revision per reel'
+      '1 revision per reel',
+      'Customisable plan is available'
     ],
     waMessage: "Hi Alight Pixels, I'm interested in the Starter preset. Let's book a free call."
   },
@@ -34,7 +35,8 @@ const PRESETS = [
       'Basic Meta Ads setup (ad budget extra)',
       'Monthly performance meeting',
       'Priority support',
-      '2 revisions per reel'
+      '2 revisions per reel',
+      'Customisable plan is available'
     ],
     waMessage: "Hi Alight Pixels, I'm interested in the Growth preset. Let's book a free call."
   },
@@ -54,7 +56,8 @@ const PRESETS = [
       'Competitor analysis',
       'Dedicated account manager',
       'Weekly reporting',
-      '2 revisions per reel'
+      '2 revisions per reel',
+      'Customisable plan is available'
     ],
     waMessage: "Hi Alight Pixels, I'm interested in the Premium preset. Let's book a free call."
   }

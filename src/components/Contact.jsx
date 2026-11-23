@@ -293,6 +293,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="form-select"
                 >
+                  <option value="One time shoot">One time shoot</option>
                   <option value="Immediate (< 1 month)">Immediate (Within 1 Month)</option>
                   <option value="1 - 3 months">1 – 3 Months</option>
                   <option value="3 - 6 months">3 – 6 Months</option>
