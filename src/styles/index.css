@@ -2005,6 +2005,301 @@ h1, h2, h3, h4, .font-serif {
 }
 
 /* ==========================================================================
+   PORTFOLIO MASONRY SECTION (Palette & Mark Match Reference Allocation)
+   Work that makes brands impossible to ignore
+   ========================================================================== */
+.portfolio-masonry-section {
+  padding-top: clamp(4rem, 7vw, 7.5rem);
+  padding-bottom: clamp(4rem, 7vw, 7.5rem);
+}
+
+.portfolio-section-header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.portfolio-eyebrow-tag {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-main-headline {
+  font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.portfolio-headline-accent {
+  color: var(--color-accent);
+  background: linear-gradient(135deg, #F9B044 0%, #FFAF38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+/* Category Filter Pills Row */
+.portfolio-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(2.5rem, 4.5vw, 4rem);
+  padding: 0 0.5rem;
+}
+
+.portfolio-filter-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: var(--color-muted);
+  border-radius: 9999px;
+  padding: 0.55rem 1.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+:root[data-theme="light"] .portfolio-filter-pill {
+  background: rgba(35, 31, 32, 0.04);
+  border-color: rgba(35, 31, 32, 0.1);
+  color: var(--color-muted);
+}
+
+.portfolio-filter-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+  border-color: rgba(249, 176, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+:root[data-theme="light"] .portfolio-filter-pill:hover {
+  background: rgba(35, 31, 32, 0.08);
+  border-color: rgba(249, 176, 68, 0.5);
+  color: var(--color-text);
+}
+
+.portfolio-filter-pill.is-active {
+  background-color: var(--color-accent);
+  color: #12100E;
+  border-color: var(--color-accent);
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(249, 176, 68, 0.35);
+}
+
+/* 3-Column Masonry Allocation Grid */
+.portfolio-masonry-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2vw, 1.85rem);
+  align-items: start;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+@media (max-width: 991px) {
+  .portfolio-masonry-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-masonry-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.portfolio-masonry-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2vw, 1.85rem);
+}
+
+/* Showcase Cards */
+.portfolio-showcase-card {
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background-color: #161413;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+}
+
+:root[data-theme="light"] .portfolio-showcase-card {
+  background-color: #1e1b18;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.portfolio-showcase-card:hover,
+.portfolio-showcase-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 28px rgba(249, 176, 68, 0.18);
+  border-color: rgba(249, 176, 68, 0.45);
+}
+
+.portfolio-card-media-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+/* Aspect Ratio Variations */
+.aspect-portrait .portfolio-card-media-wrap {
+  aspect-ratio: 4 / 5;
+}
+
+.aspect-landscape .portfolio-card-media-wrap {
+  aspect-ratio: 16 / 10;
+}
+
+.aspect-tall .portfolio-card-media-wrap {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-square .portfolio-card-media-wrap {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-phone .portfolio-card-media-wrap {
+  aspect-ratio: 9 / 16;
+  max-height: 520px;
+}
+
+.portfolio-card-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-showcase-card:hover .portfolio-card-media {
+  transform: scale(1.05);
+}
+
+/* Floating Amber Play Button for Video Cards */
+.portfolio-card-play-btn {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: #12100E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(249, 176, 68, 0.42);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              background-color 0.25s ease;
+  z-index: 2;
+}
+
+.portfolio-card-play-btn svg {
+  margin-left: 2px;
+}
+
+.portfolio-showcase-card:hover .portfolio-card-play-btn {
+  transform: scale(1.14);
+  background-color: #FFAF38;
+  box-shadow: 0 6px 24px rgba(249, 176, 68, 0.65);
+}
+
+/* Gradient Overlay with Card Typography */
+.portfolio-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 1.35rem 1.35rem;
+  background: linear-gradient(to top, rgba(14, 12, 11, 0.95) 0%, rgba(14, 12, 11, 0.6) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portfolio-card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.portfolio-card-title {
+  font-size: clamp(1.15rem, 1.35vw, 1.35rem);
+  font-weight: 600;
+  color: #FCFBF8;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+/* Bottom Strip: Complete Archive Explorer */
+.portfolio-archive-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  background: var(--color-surface);
+  border: var(--border-hairline);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.archive-strip-text {
+  max-width: 580px;
+}
+
+.archive-strip-title {
+  font-size: clamp(1.2rem, 1.5vw, 1.45rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.015em;
+}
+
+.archive-strip-sub {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.archive-strip-links {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
    MINIMALIST FOLDERS DIRECTORY (Stories We've Brought To Life)
    Clean desktop folder icon with typography placed cleanly below (no text on folder)
    ========================================================================== */
