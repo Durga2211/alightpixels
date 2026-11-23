@@ -11,8 +11,8 @@ export const SHOWCASE_ITEMS = [
     aspect: 'aspect-portrait',
     column: 1,
     mediaType: 'image',
-    src: '/assets/images/portfolio/food-beverage-01.jpg',
-    thumbnail: '/assets/images/portfolio/food-beverage-01.jpg',
+    src: '/assets/images/portfolio/cafe-brand-story.jpg',
+    thumbnail: '/assets/images/portfolio/cafe-brand-story.jpg',
     description: 'Artisanal single-origin roasting, natural morning diffusion, and culinary warmth captured for hospitality branding.'
   },
   {
@@ -62,7 +62,7 @@ export const SHOWCASE_ITEMS = [
     column: 2,
     mediaType: 'video',
     src: '/assets/videos/car-delivery.mp4',
-    poster: '/assets/images/about/bts-camera-rig.jpg',
+    poster: '/assets/images/portfolio/fitness-campaign.jpg',
     description: 'Raw kinetic movement, high-energy lighting, and performance-driven commercial cinematography.'
   },
   {
@@ -74,7 +74,7 @@ export const SHOWCASE_ITEMS = [
     column: 2,
     mediaType: 'video',
     src: '/assets/videos/instagram-reel-analytics.mp4',
-    poster: '/assets/images/portfolio/digital-content-poster.jpg',
+    poster: '/assets/images/portfolio/reels-convert-poster.jpg',
     description: 'Engineered for organic reach and high audience retention with motion graphics and viral pacing.'
   },
 
