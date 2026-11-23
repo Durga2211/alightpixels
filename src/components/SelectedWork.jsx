@@ -113,6 +113,7 @@ const SHOWCASE_ITEMS = [
     mediaType: 'video',
     src: '/assets/videos/podcast-reel.mp4',
     poster: '/assets/images/portfolio/podcast-video-poster.jpg',
+    externalUrl: 'https://youtu.be/XMb-KMZwhvw?si=RaX4vBC01BXl8Mno',
     description: 'Broadcast multi-camera setup, pristine audio fidelity, and short-form conversational highlights.'
   }
 ];
@@ -157,6 +158,10 @@ export default function SelectedWork({ onOpenPortfolio }) {
   }
 
   const handleOpenItem = (item) => {
+    if (item.externalUrl) {
+      window.open(item.externalUrl, '_blank', 'noopener,noreferrer');
+      return;
+    }
     const itemIndex = filteredItems.findIndex((i) => i.id === item.id);
     setModalData({
       stack: {
@@ -169,20 +174,32 @@ export default function SelectedWork({ onOpenPortfolio }) {
 
   const renderCard = (item) => {
     const isVideo = item.mediaType === 'video';
-    return (
-      <article
-        key={item.id}
-        className={`portfolio-showcase-card ${item.aspect}`}
-        onClick={() => handleOpenItem(item)}
-        role="button"
-        tabIndex={0}
-        aria-label={`Open ${item.title} (${item.category})`}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleOpenItem(item);
+    const isExternal = Boolean(item.externalUrl);
+    const CardElement = isExternal ? 'a' : 'article';
+    const cardProps = isExternal
+      ? {
+          href: item.externalUrl,
+          target: '_blank',
+          rel: 'noopener noreferrer'
+        }
+      : {
+          onClick: () => handleOpenItem(item),
+          role: 'button',
+          tabIndex: 0,
+          onKeyDown: (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              handleOpenItem(item);
+            }
           }
-        }}
+        };
+
+    return (
+      <CardElement
+        key={item.id}
+        className={`portfolio-showcase-card ${item.aspect} ${isExternal ? 'is-external-card' : ''}`}
+        aria-label={`Open ${item.title} (${item.category})`}
+        {...cardProps}
       >
         <div className="portfolio-card-media-wrap">
           {isVideo ? (
@@ -217,7 +234,7 @@ export default function SelectedWork({ onOpenPortfolio }) {
             <h3 className="portfolio-card-title">{item.title}</h3>
           </div>
         </div>
-      </article>
+      </CardElement>
     );
   };
 

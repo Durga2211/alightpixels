@@ -2141,6 +2141,9 @@ h1, h2, h3, h4, .font-serif {
   cursor: pointer;
   width: 100%;
   outline: none;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 :root[data-theme="light"] .portfolio-showcase-card {
